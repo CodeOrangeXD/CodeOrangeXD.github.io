@@ -152,6 +152,91 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-C语言-关于文件操作-3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/28/C语言-关于文件操作-3/">C语言 关于文件操作(3)</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/28/C语言-关于文件操作-3/" class="archive-article-date">
+  	<time datetime="2019-03-28T05:04:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="文件随机读写函数"><a href="#文件随机读写函数" class="headerlink" title="文件随机读写函数"></a><em>文件随机读写函数</em></h1><p><strong>1.读入</strong><br>            函数原型：    int fread(void <em>ptr,int size,int count,FILE </em>fp);<br>            函数功能：    fread()函数的功能是在fp指定的文件中读取count次数据项（每次size个字节）<br>                        存放到以ptr所指的内存单元地址中去。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fread(f,4,2,fp);</span><br></pre></td></tr></table></figure>
+<p>此函数从fp所指向的文件中读入2个4个字节的数据，存储到数组f中，若写入成功，此函数返回值为2。<br><strong>2.写入</strong><br>            函数原型：    int fwrite(void <em>ptr,int size,int count,FILE </em>fp);<br>            函数功能：    fwrite()函数的功能是将从ptr为首地址的内存中取出count次数据项（每次size个字节）<br>                        写入fp所指的磁盘文件中。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fwrite(butter,16,64,fp);</span><br></pre></td></tr></table></figure>
+<p>此函数从fp所指向的文件中读入2个4个字节的数据，存储到数组f中去，若写入成功，此函数返回值为2。</p>
+<h1 id="文件的定位"><a href="#文件的定位" class="headerlink" title="文件的定位"></a><em>文件的定位</em></h1><p><strong>1.fseek函数</strong><br>            函数原型：    int fseek(FILE *fp,long offset,int from);<br>            函数功能：    用来控制文件的指针移动。<br>            from：        起始位置。文件首部,当前位置和文件尾部分别对应0，1，2；或者常量 SEEK_SET,SEEK_CUR,<br>                        SEEK_END。<br>            offset：    以起始点为基点，向前移动的字节数。<br>            返回值：    定位成功为0，不成功为非0的整数值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fseek(fp,100L,0);</span><br></pre></td></tr></table></figure>
+<p>将位置指针移动到离头文件100个字节处。</p>
+<p><strong>2.ftell函数</strong><br>            函数原型：    long ftell(FILE *fp);<br>            函数功能：    获取当前文件指针的位置，即相对于文件开头的位移量（字节数）。<br>            返回值：    成功时，值大于等于0，即文件指针的当前指向。出错时，返回-1L。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = ftell(fp);</span><br><span class="line">if(i==-1L) printf(&quot;error\n&quot;);</span><br></pre></td></tr></table></figure>
+<p><strong>3.rewind()函数</strong><br>            函数原型：    void rewind(FILE <em>fp);<br>            函数功能：    定位文件指针，使文件指针指向读写文件的首地址，即打开文件时文件<br>                        指针所指向的位置。<br><strong>4.feof()函数</strong><br>            函数原型：    int feof(FILE </em>fp);<br>            函数功能：    判断fp指针是否到文件尾部。<br>            返回值：    返回值为1，表示到文件结束位置；返回值为0，表示文件未结束。</p>
+<h1 id="文件的错误检测"><a href="#文件的错误检测" class="headerlink" title="文件的错误检测"></a><em>文件的错误检测</em></h1><p><strong>1.ferror函数</strong><br>            函数原型：    int ferror(FILE <em>fp);<br>            函数功能：    用来检查文件在用各种输入输出函数进行读写时是否出错。文件指针<br>                        必须是已经定义过的。<br>            返回值：    若返回值为0，表示未出错，否则表示有错。<br>            说明：        在调用一个输入输出函数后立即检查ferror函数的值，否则信息会丢失。<br>                        在执行fopen函数时，ferror函数的初始值自动置为0。<br><strong>2.clearerr函数</strong><br>            函数原型：    void clearerr(FILE </em>fp);<br>            函数功能：    用来清除出错标志和文件结束标志，使它们为0。<br>            说明：        出错后，错误标志一直保留，直到对同一文件调用clearerr(fp)或rewind<br>                        或任何其他一个输入输出函数。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/28/C语言-关于文件操作-3/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-C语言-关于文件操作-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -455,11 +540,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言 fopen fclose fgetc fputc</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
+                <a href="javascript:void(0)" class="js-tag color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
               </li>
             
             <div class="clearfix"></div>

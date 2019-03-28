@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>C语言 关于文件操作(1) | Code</title>
+  <title>C语言 关于文件操作(3) | Code</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文件的打开与关闭1.文件的打开    fopen函数    调用格式：                FILE *fp;                fp=fopen(“文件的路径”,”文件的打开方式”)；                功能：fopen()打开一个指向文件名的文件夹，文件操作方式由打开方式的值决定。                返回值：正常打开时，返回一个指向该文件结构体的指">
-<meta name="keywords" content="C语言 fopen fclose fgetc fputc">
+  <meta name="description" content="文件随机读写函数1.读入            函数原型：    int fread(void ptr,int size,int count,FILE fp);            函数功能：    fread()函数的功能是在fp指定的文件中读取count次数据项（每次size个字节）                        存放到以ptr所指的内存单元地址中去。">
+<meta name="keywords" content="fread fwrite fseek ftell rewind feof ferror clearerr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言 关于文件操作(1)">
-<meta property="og:url" content="http://yoursite.com/2019/03/27/C语言-关于文件操作-1/index.html">
+<meta property="og:title" content="C语言 关于文件操作(3)">
+<meta property="og:url" content="http://yoursite.com/2019/03/28/C语言-关于文件操作-3/index.html">
 <meta property="og:site_name" content="Code">
-<meta property="og:description" content="文件的打开与关闭1.文件的打开    fopen函数    调用格式：                FILE *fp;                fp=fopen(“文件的路径”,”文件的打开方式”)；                功能：fopen()打开一个指向文件名的文件夹，文件操作方式由打开方式的值决定。                返回值：正常打开时，返回一个指向该文件结构体的指">
+<meta property="og:description" content="文件随机读写函数1.读入            函数原型：    int fread(void ptr,int size,int count,FILE fp);            函数功能：    fread()函数的功能是在fp指定的文件中读取count次数据项（每次size个字节）                        存放到以ptr所指的内存单元地址中去。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-27T07:02:00.581Z">
+<meta property="og:updated_time" content="2019-03-28T07:18:11.262Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言 关于文件操作(1)">
-<meta name="twitter:description" content="文件的打开与关闭1.文件的打开    fopen函数    调用格式：                FILE *fp;                fp=fopen(“文件的路径”,”文件的打开方式”)；                功能：fopen()打开一个指向文件名的文件夹，文件操作方式由打开方式的值决定。                返回值：正常打开时，返回一个指向该文件结构体的指">
+<meta name="twitter:title" content="C语言 关于文件操作(3)">
+<meta name="twitter:description" content="文件随机读写函数1.读入            函数原型：    int fread(void ptr,int size,int count,FILE fp);            函数功能：    fread()函数的功能是在fp指定的文件中读取count次数据项（每次size个字节）                        存放到以ptr所指的内存单元地址中去。">
   
     <link rel="alternative" href="/atom.xml" title="Code" type="application/atom+xml">
   
@@ -155,85 +155,38 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-C语言-关于文件操作-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-C语言-关于文件操作-3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C语言 关于文件操作(1)
+      C语言 关于文件操作(3)
     </h1>
   
 
         
-        <a href="/2019/03/27/C语言-关于文件操作-1/" class="archive-article-date">
-  	<time datetime="2019-03-27T02:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+        <a href="/2019/03/28/C语言-关于文件操作-3/" class="archive-article-date">
+  	<time datetime="2019-03-28T05:04:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="文件的打开与关闭"><a href="#文件的打开与关闭" class="headerlink" title="文件的打开与关闭"></a><em>文件的打开与关闭</em></h1><p><strong>1.文件的打开</strong><br>    fopen函数<br>    调用格式：<br>                FILE *fp;<br>                fp=fopen(“文件的路径”,”文件的打开方式”)；<br>                功能：fopen()打开一个指向文件名的文件夹，文件操作方式由打开方式的值决定。<br>                返回值：正常打开时，返回一个指向该文件结构体的指针；若错误，返回错误标志NULL<br>                文件打开方式：</p>
-<table>
-<thead>
-<tr>
-<th>文本文件</th>
-<th></th>
-<th>二进制文件</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>使用方式</td>
-<td>含义</td>
-<td>使用方式</td>
-<td>含义</td>
-</tr>
-<tr>
-<td>“r”</td>
-<td>打开文件进行只读</td>
-<td>“rb”</td>
-<td>打开二进制文件进行只读</td>
-</tr>
-<tr>
-<td>“w”</td>
-<td>建立新文本进行只读</td>
-<td>“wb”</td>
-<td>建立新二进制文件进行只读</td>
-</tr>
-<tr>
-<td>“a”</td>
-<td>打开文本进行追加</td>
-<td>“ab”</td>
-<td>打开二进制文件进行追加</td>
-</tr>
-<tr>
-<td>“r+”</td>
-<td>打开文本文件进行读/写</td>
-<td>“rb+”</td>
-<td>打开二进制文件进行读/写</td>
-</tr>
-<tr>
-<td>“w+”</td>
-<td>建立新文本进行读/写</td>
-<td>“wb+”</td>
-<td>建立新二进制文件进行读/写</td>
-</tr>
-<tr>
-<td>“a+”</td>
-<td>打开文本进行读/写/追加</td>
-<td>“ab+”</td>
-<td>打开二进制文件进行读/写/追加</td>
-</tr>
-</tbody>
-</table>
-<p>为了保证文件操作可靠性，一般在调用函数时做个判断。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if((fp = fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;))==NULL)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;File open error!\n&quot;);</span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.文件的关闭</strong><br>    fclose()函数<br>    调用格式：<br>                fclose(文件指针);<br>                功能：关闭打开的文件<br>                返回值：若成功关闭，返回一个0值，否则返回一个非零值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(fclose(fp))</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;Can not close the file!\n&quot;);</span><br><span class="line">	exig(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="文件的读写"><a href="#文件的读写" class="headerlink" title="文件的读写"></a><em>文件的读写</em></h1><p><strong>1.字符的读入</strong><br>    fgetc函数<br>        函数原型：int fgetc(FILE *fp)<br>        功能：从fp指向的文件中读取一字节代码。<br>        返回值：正常，返回读到的代码值；读到尾部或者出错，为EOF。<br>        //EOF为常量，其值为-1（EOF在 stdio.h 中有说明）</p>
-<p><strong>2.字符的写入</strong><br>    fputc函数<br>    函数原型：int fputc(int c,FILE *fp)<br>    功能：把一个字节c写入fp指向的文件中。<br>    返回值：正常，返回c;出错返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	char c;</span><br><span class="line">	int i;</span><br><span class="line">	fp = fopen(&quot;F://f1.txt&quot;, &quot;w+&quot;);</span><br><span class="line">	if (fp == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;file open error!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;input a string\n&quot;);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != &apos;#&apos;)	/*输入字符以#结束*/</span><br><span class="line">	&#123;</span><br><span class="line">		fputc(c, fp);	/*将输入的字符写入文件*/</span><br><span class="line">		c = getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	rewind(fp);			/*用于把指针fp所指的文件的内部位置的指针移动到文件头*/</span><br><span class="line">	fflush(stdin);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != EOF)	/*读文件，并测试是否到文件尾巴*/</span><br><span class="line">	&#123;</span><br><span class="line">		putchar(c);</span><br><span class="line">		c = fgetc(fp);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if (fclose(fp))		/*正常关闭*/</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;can not close the fil!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	fputc(&apos;b&apos;, fp);</span><br><span class="line">	fclose(fp);</span><br></pre></td></tr></table></figure></p>
+        <h1 id="文件随机读写函数"><a href="#文件随机读写函数" class="headerlink" title="文件随机读写函数"></a><em>文件随机读写函数</em></h1><p><strong>1.读入</strong><br>            函数原型：    int fread(void <em>ptr,int size,int count,FILE </em>fp);<br>            函数功能：    fread()函数的功能是在fp指定的文件中读取count次数据项（每次size个字节）<br>                        存放到以ptr所指的内存单元地址中去。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fread(f,4,2,fp);</span><br></pre></td></tr></table></figure>
+<p>此函数从fp所指向的文件中读入2个4个字节的数据，存储到数组f中，若写入成功，此函数返回值为2。<br><strong>2.写入</strong><br>            函数原型：    int fwrite(void <em>ptr,int size,int count,FILE </em>fp);<br>            函数功能：    fwrite()函数的功能是将从ptr为首地址的内存中取出count次数据项（每次size个字节）<br>                        写入fp所指的磁盘文件中。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fwrite(butter,16,64,fp);</span><br></pre></td></tr></table></figure>
+<p>此函数从fp所指向的文件中读入2个4个字节的数据，存储到数组f中去，若写入成功，此函数返回值为2。</p>
+<h1 id="文件的定位"><a href="#文件的定位" class="headerlink" title="文件的定位"></a><em>文件的定位</em></h1><p><strong>1.fseek函数</strong><br>            函数原型：    int fseek(FILE *fp,long offset,int from);<br>            函数功能：    用来控制文件的指针移动。<br>            from：        起始位置。文件首部,当前位置和文件尾部分别对应0，1，2；或者常量 SEEK_SET,SEEK_CUR,<br>                        SEEK_END。<br>            offset：    以起始点为基点，向前移动的字节数。<br>            返回值：    定位成功为0，不成功为非0的整数值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fseek(fp,100L,0);</span><br></pre></td></tr></table></figure>
+<p>将位置指针移动到离头文件100个字节处。</p>
+<p><strong>2.ftell函数</strong><br>            函数原型：    long ftell(FILE *fp);<br>            函数功能：    获取当前文件指针的位置，即相对于文件开头的位移量（字节数）。<br>            返回值：    成功时，值大于等于0，即文件指针的当前指向。出错时，返回-1L。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = ftell(fp);</span><br><span class="line">if(i==-1L) printf(&quot;error\n&quot;);</span><br></pre></td></tr></table></figure>
+<p><strong>3.rewind()函数</strong><br>            函数原型：    void rewind(FILE <em>fp);<br>            函数功能：    定位文件指针，使文件指针指向读写文件的首地址，即打开文件时文件<br>                        指针所指向的位置。<br><strong>4.feof()函数</strong><br>            函数原型：    int feof(FILE </em>fp);<br>            函数功能：    判断fp指针是否到文件尾部。<br>            返回值：    返回值为1，表示到文件结束位置；返回值为0，表示文件未结束。</p>
+<h1 id="文件的错误检测"><a href="#文件的错误检测" class="headerlink" title="文件的错误检测"></a><em>文件的错误检测</em></h1><p><strong>1.ferror函数</strong><br>            函数原型：    int ferror(FILE <em>fp);<br>            函数功能：    用来检查文件在用各种输入输出函数进行读写时是否出错。文件指针<br>                        必须是已经定义过的。<br>            返回值：    若返回值为0，表示未出错，否则表示有错。<br>            说明：        在调用一个输入输出函数后立即检查ferror函数的值，否则信息会丢失。<br>                        在执行fopen函数时，ferror函数的初始值自动置为0。<br><strong>2.clearerr函数</strong><br>            函数原型：    void clearerr(FILE </em>fp);<br>            函数功能：    用来清除出错标志和文件结束标志，使它们为0。<br>            说明：        出错后，错误标志一直保留，直到对同一文件调用clearerr(fp)或rewind<br>                        或任何其他一个输入输出函数。</p>
 
       
 
@@ -268,7 +221,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言 fopen fclose fgetc fputc</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
         		</li>
       		
 		</ul>
@@ -324,7 +277,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/27/C语言-关于文件操作-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/28/C语言-关于文件操作-3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -338,15 +291,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/27/C语言-关于文件操作-2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          C语言 关于文件操作(2)
-        
-      </div>
-    </a>
   
+    <a href="/2019/03/27/C语言-关于文件操作-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C语言 关于文件操作(2)</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
