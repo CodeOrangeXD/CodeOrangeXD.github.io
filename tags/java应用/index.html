@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>栈的应用---进制转换 | Blog of Orange</title>
+  <title>Tag: java应用 | Blog of Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="思路：    1.创建一个空栈    2.将计算的结果循环入栈    3.将计算的结果循环出栈 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808">
-<meta name="keywords" content="算法 栈">
-<meta property="og:type" content="article">
-<meta property="og:title" content="栈的应用---进制转换">
-<meta property="og:url" content="http://yoursite.com/2019/03/28/栈的应用-进制转换/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Blog of Orange">
+<meta property="og:url" content="http://yoursite.com/tags/java应用/index.html">
 <meta property="og:site_name" content="Blog of Orange">
-<meta property="og:description" content="思路：    1.创建一个空栈    2.将计算的结果循环入栈    3.将计算的结果循环出栈 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-29T04:41:05.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="栈的应用---进制转换">
-<meta name="twitter:description" content="思路：    1.创建一个空栈    2.将计算的结果循环入栈    3.将计算的结果循环出栈 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808">
+<meta name="twitter:title" content="Blog of Orange">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Orange" type="application/atom+xml">
   
@@ -151,167 +146,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-栈的应用-进制转换" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      栈的应用---进制转换
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/09/07/洗牌（java）/" class="archive-article-date">
+  	<time datetime="2019-09-07T05:59:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/09/07/洗牌（java）/">洗牌(java)</a>
     </h1>
   
 
-        
-        <a href="/2019/03/28/栈的应用-进制转换/" class="archive-article-date">
-  	<time datetime="2019-03-28T11:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>思路：<font color="#FFD700" size="3"><br>    1.创建一个空栈<br>    2.将计算的结果循环入栈<br>    3.将计算的结果循环出栈<br></font></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">/////////10进制转2进制</span><br><span class="line"></span><br><span class="line">#include &quot;stdafx.h&quot;</span><br><span class="line">#include &quot;stdio.h&quot;</span><br><span class="line">#include &quot;stdlib.h&quot;</span><br><span class="line">#define Stack_init_size 100</span><br><span class="line">#define ADDstack	10</span><br><span class="line"></span><br><span class="line">//创建一个栈 数据类型</span><br><span class="line">typedef struct Sqstack</span><br><span class="line">&#123;</span><br><span class="line">	int *top;</span><br><span class="line">	int *base;</span><br><span class="line">	int stacksize;</span><br><span class="line">&#125;stack;</span><br><span class="line">//初始化一个栈 （构造一个空栈）</span><br><span class="line">void InitStack(Sqstack);</span><br><span class="line">//找到栈顶的函数</span><br><span class="line">int GetTop(Sqstack);</span><br><span class="line">//入栈函数</span><br><span class="line">int Push(Sqstack,int);</span><br><span class="line">//出栈函数</span><br><span class="line">int OutStack(Sqstack,int);</span><br><span class="line"></span><br><span class="line">int _tmain(int argc, _TCHAR* argv[])</span><br><span class="line">&#123;</span><br><span class="line">	int x,y;</span><br><span class="line">	printf(&quot;请输入要转换的数：&quot;);</span><br><span class="line">	scanf(&quot;%d&quot;, &amp;x);</span><br><span class="line">	void InitStack(Sqstack stack);</span><br><span class="line">	do&#123;</span><br><span class="line">		y = x % 2;</span><br><span class="line">		x = x / 2;</span><br><span class="line">		int Push(Sqstack stack, int y);</span><br><span class="line">		int OutStack(Sqstack stack, int x);</span><br><span class="line">		printf(&quot;%d\t&quot;, y);</span><br><span class="line"></span><br><span class="line">	&#125; while (x != 0);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void Initstack(Sqstack stack)</span><br><span class="line">&#123;</span><br><span class="line">	stack.base = (int*)malloc(Stack_init_size * sizeof(int));		//动态分配内存</span><br><span class="line">	if (!stack.base)	//	判断栈是否存在</span><br><span class="line">	&#123; </span><br><span class="line">		exit(0); </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	stack.top = stack.base;</span><br><span class="line">	stack.stacksize = Stack_init_size;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int GetTop(Sqstack stack)</span><br><span class="line">&#123;</span><br><span class="line">	int num;</span><br><span class="line">	if (stack.base = stack.top) return -1;		//取余不可能出现负1 所以-1表示错误标志</span><br><span class="line">	num = *(stack.top - 1);</span><br><span class="line">	return num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int Push(Sqstack stack, int num)</span><br><span class="line">&#123;</span><br><span class="line">	if (stack.top - stack.base &gt;= stack.stacksize)	//	判段栈是否为满栈</span><br><span class="line">	&#123;</span><br><span class="line">		stack.base = (int*)realloc(stack.base, (Stack_init_size + ADDstack)*sizeof(int));</span><br><span class="line">		if (!stack.base)exit(0);</span><br><span class="line">		stack.top = stack.base + stack.stacksize;</span><br><span class="line">		stack.stacksize += ADDstack;</span><br><span class="line">	&#125;</span><br><span class="line">	*stack.top++ = num;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">int OutStack(Sqstack stack, int num)</span><br><span class="line">&#123;</span><br><span class="line">	if (stack.base == stack.top) return -2;	//	判断栈是否为空栈</span><br><span class="line">	num = *--stack.top;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法 栈</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java应用</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/28/栈的应用-进制转换/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/03/29/链表-实现录入学生信息/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          链表 实现录入学生信息
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/03/28/C语言-关于文件操作-3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C语言 关于文件操作(3)</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -334,9 +233,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

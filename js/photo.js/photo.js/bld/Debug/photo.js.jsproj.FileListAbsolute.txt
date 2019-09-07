@@ -1,0 +1,15 @@
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bin\Debug\ReverseMap\resources.pri
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bin\Debug\AppxManifest.xml
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bin\Debug\photo.js.build.appxrecipe
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\priconfig.xml
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\priconfig.xml.intermediate
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\layout.resfiles
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\layout.resfiles.intermediate
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\resources.resfiles
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\resources.resfiles.intermediate
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\pri.resfiles
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\pri.resfiles.intermediate
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\qualifiers.txt
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\qualifiers.txt.intermediate
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\14421\blog\themes\yilia\source\photo.js\photo.js\bld\Debug\ProjectArchitectures.txt
