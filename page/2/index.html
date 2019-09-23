@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Blog of Orange</title>
+  <title>Blog of Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Blog of Orange">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Blog of Orange">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
@@ -154,479 +154,141 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-C语言-关于文件操作-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/27/C语言-关于文件操作-1/">C语言 关于文件操作(1)</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/27/C语言-关于文件操作-1/" class="archive-article-date">
+  	<time datetime="2019-03-27T02:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="文件的打开与关闭"><a href="#文件的打开与关闭" class="headerlink" title="文件的打开与关闭"></a><em>文件的打开与关闭</em></h1><p><strong>1.文件的打开</strong><br>    fopen函数<br>    调用格式：<br>                FILE *fp;<br>                fp=fopen(“文件的路径”,”文件的打开方式”)；<br>                功能：fopen()打开一个指向文件名的文件夹，文件操作方式由打开方式的值决定。<br>                返回值：正常打开时，返回一个指向该文件结构体的指针；若错误，返回错误标志NULL<br>                文件打开方式：</p>
+<table>
+<thead>
+<tr>
+<th>文本文件</th>
+<th></th>
+<th>二进制文件</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用方式</td>
+<td>含义</td>
+<td>使用方式</td>
+<td>含义</td>
+</tr>
+<tr>
+<td>“r”</td>
+<td>打开文件进行只读</td>
+<td>“rb”</td>
+<td>打开二进制文件进行只读</td>
+</tr>
+<tr>
+<td>“w”</td>
+<td>建立新文本进行只读</td>
+<td>“wb”</td>
+<td>建立新二进制文件进行只读</td>
+</tr>
+<tr>
+<td>“a”</td>
+<td>打开文本进行追加</td>
+<td>“ab”</td>
+<td>打开二进制文件进行追加</td>
+</tr>
+<tr>
+<td>“r+”</td>
+<td>打开文本文件进行读/写</td>
+<td>“rb+”</td>
+<td>打开二进制文件进行读/写</td>
+</tr>
+<tr>
+<td>“w+”</td>
+<td>建立新文本进行读/写</td>
+<td>“wb+”</td>
+<td>建立新二进制文件进行读/写</td>
+</tr>
+<tr>
+<td>“a+”</td>
+<td>打开文本进行读/写/追加</td>
+<td>“ab+”</td>
+<td>打开二进制文件进行读/写/追加</td>
+</tr>
+</tbody>
+</table>
+<p>为了保证文件操作可靠性，一般在调用函数时做个判断。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if((fp = fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;))==NULL)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;File open error!\n&quot;);</span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.文件的关闭</strong><br>    fclose()函数<br>    调用格式：<br>                fclose(文件指针);<br>                功能：关闭打开的文件<br>                返回值：若成功关闭，返回一个0值，否则返回一个非零值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(fclose(fp))</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;Can not close the file!\n&quot;);</span><br><span class="line">	exig(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="文件的读写"><a href="#文件的读写" class="headerlink" title="文件的读写"></a><em>文件的读写</em></h1><p><strong>1.字符的读入</strong><br>    fgetc函数<br>        函数原型：int fgetc(FILE *fp)<br>        功能：从fp指向的文件中读取一字节代码。<br>        返回值：正常，返回读到的代码值；读到尾部或者出错，为EOF。<br>        //EOF为常量，其值为-1（EOF在 stdio.h 中有说明）</p>
+<p><strong>2.字符的写入</strong><br>    fputc函数<br>    函数原型：int fputc(int c,FILE *fp)<br>    功能：把一个字节c写入fp指向的文件中。<br>    返回值：正常，返回c;出错返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	char c;</span><br><span class="line">	int i;</span><br><span class="line">	fp = fopen(&quot;F://f1.txt&quot;, &quot;w+&quot;);</span><br><span class="line">	if (fp == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;file open error!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;input a string\n&quot;);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != &apos;#&apos;)	/*输入字符以#结束*/</span><br><span class="line">	&#123;</span><br><span class="line">		fputc(c, fp);	/*将输入的字符写入文件*/</span><br><span class="line">		c = getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	rewind(fp);			/*用于把指针fp所指的文件的内部位置的指针移动到文件头*/</span><br><span class="line">	fflush(stdin);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != EOF)	/*读文件，并测试是否到文件尾巴*/</span><br><span class="line">	&#123;</span><br><span class="line">		putchar(c);</span><br><span class="line">		c = fgetc(fp);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if (fclose(fp))		/*正常关闭*/</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;can not close the fil!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	fputc(&apos;b&apos;, fp);</span><br><span class="line">	fclose(fp);</span><br></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/23/关键字super的用法/" class="archive-article-date">
-  	<time datetime="2019-09-23T03:07:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/23/关键字super的用法/">关键字super的用法以及访问修饰符的作用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">super 访问修饰符</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言 fopen fclose fgetc fputc</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/27/C语言-关于文件操作-1/">展开全文 >></a>
+        </p>
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/15/Astah画类图/" class="archive-article-date">
-  	<time datetime="2019-09-15T13:32:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-15</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/Astah画类图/">Astah画类图</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Astah//" class="article-tag-list-link color1">Astah</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/14/类的继承/" class="archive-article-date">
-  	<time datetime="2019-09-14T05:35:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/14/类的继承/">类的继承</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">面向对象</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/10/BindarySearch/" class="archive-article-date">
-  	<time datetime="2019-09-10T01:15:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/10/BindarySearch/">BindarySearch</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">二分法查找</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/查找（java）//" class="article-tag-list-link color4">查找（java）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/09/sort/" class="archive-article-date">
-  	<time datetime="2019-09-09T02:55:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/09/sort/">sort</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">选择排序 冒泡排序 反转排序 java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/排序（java）//" class="article-tag-list-link color4">排序（java）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/07/洗牌（java）/" class="archive-article-date">
-  	<time datetime="2019-09-07T05:59:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/07/洗牌（java）/">洗牌(java)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java应用</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/29/链表-实现录入学生信息/" class="archive-article-date">
-  	<time datetime="2019-03-29T04:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/29/链表-实现录入学生信息/">链表 实现录入学生信息</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">算法 链表</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/28/栈的应用-进制转换/" class="archive-article-date">
-  	<time datetime="2019-03-28T11:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/28/栈的应用-进制转换/">栈的应用---进制转换</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法 栈</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/28/C语言-关于文件操作-3/" class="archive-article-date">
-  	<time datetime="2019-03-28T05:04:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/28/C语言-关于文件操作-3/">C语言 关于文件操作(3)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/27/C语言-关于文件操作-2/" class="archive-article-date">
-  	<time datetime="2019-03-27T07:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/27/C语言-关于文件操作-2/">C语言 关于文件操作(2)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C语言 fgets fputs fscanf fprintf</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
-  
-
-    
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
@@ -650,9 +312,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
-		isArchive: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

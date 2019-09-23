@@ -154,6 +154,132 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-关键字super的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/23/关键字super的用法/">关键字super的用法以及访问修饰符的作用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/23/关键字super的用法/" class="archive-article-date">
+  	<time datetime="2019-09-23T03:07:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font color="#FF1493" size="3"><br>      关键字super在子类的构造方法中，用来继承父类的属性。<br>      访问修饰符的作用如下<br></font>
+
+
+<table>
+<thead>
+<tr>
+<th>访问包的位置</th>
+<th>类</th>
+<th>修饰</th>
+<th>符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>private</td>
+<td>protected</td>
+<td>public</td>
+</tr>
+<tr>
+<td>本类</td>
+<td>可见</td>
+<td>可见</td>
+<td>可见</td>
+</tr>
+<tr>
+<td>同包其他类或子类</td>
+<td>不可见</td>
+<td>可见</td>
+<td>可见</td>
+</tr>
+<tr>
+<td>其他包的类或子类</td>
+<td>不可见</td>
+<td>不可见</td>
+<td>可见</td>
+</tr>
+</tbody>
+</table>
+<p>代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public class demo extends demo1 &#123;</span><br><span class="line">	demo(int x,int y,int z)&#123;</span><br><span class="line">		super(x,y,z);</span><br><span class="line">	&#125;</span><br><span class="line">	demo()&#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		demo jc=new demo(1,100,1000);</span><br><span class="line">		demo jz=new demo();</span><br><span class="line">		System.out.println(jc.y);</span><br><span class="line">		System.out.println(jc.z);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class demo1&#123;</span><br><span class="line">	private int x=0;</span><br><span class="line">	protected int y=1;</span><br><span class="line">	public int z=2;</span><br><span class="line">	</span><br><span class="line">	demo1(int x,int y,int z)&#123;</span><br><span class="line">		this.y=y;</span><br><span class="line">		this.z=z;</span><br><span class="line">		this.x=x;</span><br><span class="line">	&#125;</span><br><span class="line">	demo1()&#123;</span><br><span class="line">		System.out.println(&quot;123&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://m.qpic.cn/psb?/V11ymLxQ0unjMi/r.2nL1f.oOK.q4*oHfSAW7TweaxcBzIWmIe2y*eWDH8!/b/dFIBAAAAAAAA&amp;bo=VQKNAQAAAAADF.k!&amp;rf=viewer_4" alt="输出结果图"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">super 访问修饰符</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/23/关键字super的用法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Astah画类图" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -175,7 +301,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>使用Astah画类图如下<br><img src="http://m.qpic.cn/psb?/V11ymLxQ0unjMi/v10iW0RLgc9Ut.CBEcbWeJLBl5G0vb5dAJQY6ovFjTQ!/b/dL8AAAAAAAAA&amp;bo=1APaAgAAAAADFz0!&amp;rf=viewer_4" alt="输出结果图"></p>
-<font color="#FF1493" size="3"><br>    黄点 代表属性<br>    绿杠 代表方法<br><br>    使用Tool–java–export<br>    可以导出.java文件<br></font>
+<font color="#FF1493" size="3"><br>    黄点 代表属性<br>    绿杠 代表方法<br><br>    使用Tools–java–export<br>    可以导出.java文件<br></font>
 
       
 
@@ -914,138 +1040,10 @@
 
 
   
-    <article id="post-C语言-关于文件操作-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/27/C语言-关于文件操作-1/">C语言 关于文件操作(1)</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/27/C语言-关于文件操作-1/" class="archive-article-date">
-  	<time datetime="2019-03-27T02:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="文件的打开与关闭"><a href="#文件的打开与关闭" class="headerlink" title="文件的打开与关闭"></a><em>文件的打开与关闭</em></h1><p><strong>1.文件的打开</strong><br>    fopen函数<br>    调用格式：<br>                FILE *fp;<br>                fp=fopen(“文件的路径”,”文件的打开方式”)；<br>                功能：fopen()打开一个指向文件名的文件夹，文件操作方式由打开方式的值决定。<br>                返回值：正常打开时，返回一个指向该文件结构体的指针；若错误，返回错误标志NULL<br>                文件打开方式：</p>
-<table>
-<thead>
-<tr>
-<th>文本文件</th>
-<th></th>
-<th>二进制文件</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>使用方式</td>
-<td>含义</td>
-<td>使用方式</td>
-<td>含义</td>
-</tr>
-<tr>
-<td>“r”</td>
-<td>打开文件进行只读</td>
-<td>“rb”</td>
-<td>打开二进制文件进行只读</td>
-</tr>
-<tr>
-<td>“w”</td>
-<td>建立新文本进行只读</td>
-<td>“wb”</td>
-<td>建立新二进制文件进行只读</td>
-</tr>
-<tr>
-<td>“a”</td>
-<td>打开文本进行追加</td>
-<td>“ab”</td>
-<td>打开二进制文件进行追加</td>
-</tr>
-<tr>
-<td>“r+”</td>
-<td>打开文本文件进行读/写</td>
-<td>“rb+”</td>
-<td>打开二进制文件进行读/写</td>
-</tr>
-<tr>
-<td>“w+”</td>
-<td>建立新文本进行读/写</td>
-<td>“wb+”</td>
-<td>建立新二进制文件进行读/写</td>
-</tr>
-<tr>
-<td>“a+”</td>
-<td>打开文本进行读/写/追加</td>
-<td>“ab+”</td>
-<td>打开二进制文件进行读/写/追加</td>
-</tr>
-</tbody>
-</table>
-<p>为了保证文件操作可靠性，一般在调用函数时做个判断。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if((fp = fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;))==NULL)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;File open error!\n&quot;);</span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.文件的关闭</strong><br>    fclose()函数<br>    调用格式：<br>                fclose(文件指针);<br>                功能：关闭打开的文件<br>                返回值：若成功关闭，返回一个0值，否则返回一个非零值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(fclose(fp))</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;Can not close the file!\n&quot;);</span><br><span class="line">	exig(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h1 id="文件的读写"><a href="#文件的读写" class="headerlink" title="文件的读写"></a><em>文件的读写</em></h1><p><strong>1.字符的读入</strong><br>    fgetc函数<br>        函数原型：int fgetc(FILE *fp)<br>        功能：从fp指向的文件中读取一字节代码。<br>        返回值：正常，返回读到的代码值；读到尾部或者出错，为EOF。<br>        //EOF为常量，其值为-1（EOF在 stdio.h 中有说明）</p>
-<p><strong>2.字符的写入</strong><br>    fputc函数<br>    函数原型：int fputc(int c,FILE *fp)<br>    功能：把一个字节c写入fp指向的文件中。<br>    返回值：正常，返回c;出错返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	char c;</span><br><span class="line">	int i;</span><br><span class="line">	fp = fopen(&quot;F://f1.txt&quot;, &quot;w+&quot;);</span><br><span class="line">	if (fp == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;file open error!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;input a string\n&quot;);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != &apos;#&apos;)	/*输入字符以#结束*/</span><br><span class="line">	&#123;</span><br><span class="line">		fputc(c, fp);	/*将输入的字符写入文件*/</span><br><span class="line">		c = getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	rewind(fp);			/*用于把指针fp所指的文件的内部位置的指针移动到文件头*/</span><br><span class="line">	fflush(stdin);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != EOF)	/*读文件，并测试是否到文件尾巴*/</span><br><span class="line">	&#123;</span><br><span class="line">		putchar(c);</span><br><span class="line">		c = fgetc(fp);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if (fclose(fp))		/*正常关闭*/</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;can not close the fil!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	fputc(&apos;b&apos;, fp);</span><br><span class="line">	fclose(fp);</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言 fopen fclose fgetc fputc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/27/C语言-关于文件操作-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -1139,11 +1137,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言 fopen fclose fgetc fputc</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言 fopen fclose fgetc fputc</a>
+                <a href="javascript:void(0)" class="js-tag color2">super 访问修饰符</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1151,11 +1149,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">算法 栈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">二分法查找</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法 栈</a>
+                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
               </li>
              
               <li class="article-tag-list-item">
