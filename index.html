@@ -154,6 +154,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-java文件类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/24/java文件类/">java文件类</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/24/java文件类/" class="archive-article-date">
+  	<time datetime="2019-09-24T01:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font color="#FF1493" size="3"><br>    数据流相当与传输直接的通道<br>    调用Creatnewfile()时必须加上异常处理<br>    使用FileInputStream与FileOutputStream类是必须加上异常处理<br>    FileInputStream是从文件中读取字节为单位的数据<br>    FileOutputStream是也入文件以字节为单位<br></font>
+
+<p>For Example<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">import java.io.File;</span><br><span class="line">import java.io.FileInputStream;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class demo &#123;</span><br><span class="line">	public static void  main(String[] args) &#123;</span><br><span class="line">		String filepath=&quot;D:/mytext.txt&quot;;</span><br><span class="line">		File file=new File(filepath);</span><br><span class="line">		//创建文件</span><br><span class="line">		try &#123;</span><br><span class="line">		file.createNewFile();</span><br><span class="line">		&#125;catch(Exception e) &#123;</span><br><span class="line">			e.getMessage();</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		if(file.exists()) &#123;</span><br><span class="line">			System.out.println(&quot;文件已经创建&quot;);</span><br><span class="line">			long length=file.length();</span><br><span class="line">			System.out.println(length);</span><br><span class="line">			try &#123;</span><br><span class="line">			FileInputStream fileinput=new FileInputStream(file);</span><br><span class="line">			byte array[]=new byte[(int)length];</span><br><span class="line">			int len=fileinput.read(array);</span><br><span class="line">			System.out.println(&quot;文件中的内容为：&quot;+new String(array,0,len));</span><br><span class="line">			fileinput.close();</span><br><span class="line">			&#125;catch(Exception e) &#123;</span><br><span class="line">				e.getMessage();</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;else &#123;</span><br><span class="line">			System.out.println(&quot;失败&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://m.qpic.cn/psb?/V11ymLxQ0unjMi/ZdHtQe14s5*R3zIPY7U2cFW9EdcFtifXqdGkOJ4y1Ww!/b/dFMBAAAAAAAA&amp;bo=ZgHQAAAAAAADB5U!&amp;rf=viewer_4" alt="输出结果图"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">I/O流</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/24/java文件类/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-关键字super的用法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -962,84 +1050,6 @@
 
 
   
-    <article id="post-C语言-关于文件操作-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/27/C语言-关于文件操作-2/">C语言 关于文件操作(2)</a>
-    </h1>
-  
-
-        
-        <a href="/2019/03/27/C语言-关于文件操作-2/" class="archive-article-date">
-  	<time datetime="2019-03-27T07:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="字符串方式文件读写函数"><a href="#字符串方式文件读写函数" class="headerlink" title="字符串方式文件读写函数"></a><em>字符串方式文件读写函数</em></h1><p><strong>1.字符串的读入</strong><br>    fgets函数<br>    函数原型：char <em>fgets(char </em>s,int n,FILE *fp)<br>    功能：    fgets()从fp所指文件读n-1个字符送入s(可以是字符数组名)指向的内存区，并自动在<br>            最后加一个’\0’。<br>    返回值：正常，返回字符串的首地址；出错或文件尾，返回NULL。</p>
-<p><strong>2.fputs函数</strong><br>    函数原型：int fputs(char <em>s,FILE </em>fp)<br>    功能：    把s所指向的字符串写入fp指向的文件，字符串的结束符’\0’不写入文件。<br>    返回值：正常，返回最后一个写入的字符，出错为EOF。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">char str[20];</span><br><span class="line">if((fp=fopen(&quot;F:\\f1.txt&quot;,&quot;w+&quot;))==NULL)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;can not open file&quot;);</span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;input a string\n&quot;);</span><br><span class="line">while(strlen(gets(str))&gt;0)</span><br><span class="line">&#123;</span><br><span class="line">	fputs(str,fp);</span><br><span class="line">&#125;				</span><br><span class="line">rewind(fp);</span><br><span class="line">while(fgets(str,20,fp)!=NULL)</span><br><span class="line">&#123;</span><br><span class="line">	fputs(str,stdout);		//相当于puts(str);</span><br><span class="line">&#125;</span><br><span class="line">fclose(fp);</span><br></pre></td></tr></table></figure>
-<h1 id="格式化文件读写"><a href="#格式化文件读写" class="headerlink" title="格式化文件读写"></a><em>格式化文件读写</em></h1><p><strong>1.读入</strong><br>    函数原型：int fscanf(FILE *fp,格式控制串，输入列表)<br>    功能：    fscanf()函数的功能是从fp指向的文件中，按格式控制串中的控制符读取相应数据赋给输入列表中对应的变量地址中。<br>    返回值：成功，返回读入的个数，出错或文件尾，返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	int n;</span><br><span class="line">	float x;</span><br><span class="line">	fp=fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;);</span><br><span class="line">	fscanf(fp,&quot;%d%f&quot;,&amp;n,&amp;x);//表示从文件f1.txt中分别读入整形数到变量n，浮点数到变量x。</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.写入</strong><br>    函数原型：int fprintf(FILE *fp,格式控制串，输出列表)<br>    功能：    fprintf()函数的功能是按格式控制串中的控制符把相应数据写入fp指向的文件中。<br>    返回值：成功，返回写入的个数，出错或文件尾，返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">int n;</span><br><span class="line">float x;</span><br><span class="line">fp=fopen(&quot;F:\\f1.txt&quot;,&quot;w&quot;);</span><br><span class="line">fprintf(fp,&quot;%d%f&quot;,n,x);</span><br><span class="line">//表示把变量n和x的数值写入文件f1.txt。</span><br></pre></td></tr></table></figure></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C语言 fgets fputs fscanf fprintf</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/27/C语言-关于文件操作-2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1141,7 +1151,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">super 访问修饰符</a>
+                <a href="javascript:void(0)" class="js-tag color5">I/O流</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1149,7 +1159,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法 栈</a>
+                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1157,7 +1167,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
+                <a href="javascript:void(0)" class="js-tag color5">算法 栈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">super 访问修饰符</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1165,7 +1179,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">算法 链表</a>
+                <a href="javascript:void(0)" class="js-tag color2">java应用</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1173,7 +1187,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java应用</a>
+                <a href="javascript:void(0)" class="js-tag color1">算法 链表</a>
               </li>
             
             <div class="clearfix"></div>
