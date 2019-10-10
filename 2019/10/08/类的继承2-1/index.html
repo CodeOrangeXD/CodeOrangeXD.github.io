@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Blog of Orange</title>
+  <title>类的继承 | Blog of Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog of Orange">
-<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
+  <meta name="description" content="1.类在继承时不允许多重继承（即一个子类只允许有一个父类）    2.父类的静态方法在子类中可以直接调用    3.父类的非静态方法在调用时必须使用 对象.方法使用。  Example:1234567891011121314151617181920212223242526272829303132333435363738class parent&amp;#123;	static void drawo">
+<meta name="keywords" content="继承">
+<meta property="og:type" content="article">
+<meta property="og:title" content="类的继承">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/类的继承2-1/index.html">
 <meta property="og:site_name" content="Blog of Orange">
+<meta property="og:description" content="1.类在继承时不允许多重继承（即一个子类只允许有一个父类）    2.父类的静态方法在子类中可以直接调用    3.父类的非静态方法在调用时必须使用 对象.方法使用。  Example:1234567891011121314151617181920212223242526272829303132333435363738class parent&amp;#123;	static void drawo">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V11ymLxQ0unjMi/.wE3890UJAZfCM0LU5uNRNsAFh5cPQQz1wl0l3e2njg!/b/dFIBAAAAAAAA&bo=UQKKAQAAAAADB*o!&rf=viewer_4">
+<meta property="og:updated_time" content="2019-10-10T00:17:21.745Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Orange">
+<meta name="twitter:title" content="类的继承">
+<meta name="twitter:description" content="1.类在继承时不允许多重继承（即一个子类只允许有一个父类）    2.父类的静态方法在子类中可以直接调用    3.父类的非静态方法在调用时必须使用 对象.方法使用。  Example:1234567891011121314151617181920212223242526272829303132333435363738class parent&amp;#123;	static void drawo">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V11ymLxQ0unjMi/.wE3890UJAZfCM0LU5uNRNsAFh5cPQQz1wl0l3e2njg!/b/dFIBAAAAAAAA&bo=UQKKAQAAAAADB*o!&rf=viewer_4">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Orange" type="application/atom+xml">
   
@@ -152,188 +159,168 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-类的继承2-1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/28/栈的应用-进制转换/" class="archive-article-date">
-  	<time datetime="2019-03-28T11:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/28/栈的应用-进制转换/">栈的应用---进制转换</a>
+    <h1 class="article-title" itemprop="name">
+      类的继承
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/08/类的继承2-1/" class="archive-article-date">
+  	<time datetime="2019-10-08T01:36:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font color="#FF1493" size="3"><br>    1.类在继承时不允许多重继承（即一个子类只允许有一个父类）<br>    2.父类的静态方法在子类中可以直接调用<br>    3.父类的非静态方法在调用时必须使用 对象.方法使用。<br></font>
+
+<p>Example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">class parent&#123;</span><br><span class="line">	static void drawone()&#123;</span><br><span class="line">		System.out.println(&quot;****************&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	static void drawtwo() &#123;</span><br><span class="line">		System.out.println(&quot;xxxxxxxxxxxxxxxxx&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	void drawthree() &#123;</span><br><span class="line">		System.out.println(&quot;mmmmmmmmmmmmmmmmmmmmm&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	parent(String x)&#123;</span><br><span class="line">		System.out.println(x);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class demo1&#123;</span><br><span class="line">	int age;</span><br><span class="line">	abstract void text();</span><br><span class="line">&#125;</span><br><span class="line">public class demo extends parent&#123;</span><br><span class="line">	static void drawtwo() &#123;</span><br><span class="line">		System.out.println(&quot;zzzzzzzzzzzzzzzzzzzzz&quot;);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	demo()&#123;</span><br><span class="line">		super(&quot;ttttt&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// TODO Auto-generated method stub\</span><br><span class="line">		drawone();</span><br><span class="line">		drawtwo();</span><br><span class="line">		demo d=new demo();</span><br><span class="line">		d.drawthree();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://m.qpic.cn/psb?/V11ymLxQ0unjMi/.wE3890UJAZfCM0LU5uNRNsAFh5cPQQz1wl0l3e2njg!/b/dFIBAAAAAAAA&amp;bo=UQKKAQAAAAADB*o!&amp;rf=viewer_4" alt="输出结果图"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法 栈</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">继承</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        			<a href="/categories/java//" class="article-tag-list-link color5">java</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/类的继承2-1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/28/C语言-关于文件操作-3/" class="archive-article-date">
-  	<time datetime="2019-03-28T05:04:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/10/10/抽象类与接口/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          抽象类与接口
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/24/java文件类/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">java文件类</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/28/C语言-关于文件操作-3/">C语言 关于文件操作(3)</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/27/C语言-关于文件操作-2/" class="archive-article-date">
-  	<time datetime="2019-03-27T07:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/27/C语言-关于文件操作-2/">C语言 关于文件操作(2)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C语言 fgets fputs fscanf fprintf</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/27/C语言-关于文件操作-1/" class="archive-article-date">
-  	<time datetime="2019-03-27T02:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/27/C语言-关于文件操作-1/">C语言 关于文件操作(1)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言 fopen fclose fgetc fputc</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -357,8 +344,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
