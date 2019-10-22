@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>多线程 | Blog of Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="线程的构造方法中 new出所需要的线程的个数，setPriority方法设置线程的优先级。    使用 对象=new Thread(new Runnable(){})设置线程    Runnable对象中包含run(){}方法    使用对象.start();调用线程。  12345678910111213141516171819202122232425262728293031323334">
+  <meta name="description" content="线程的构造方法中 new出所需要的线程的个数，setPriority方法设置线程的优先级。     使用 对象=new Thread(new Runnable(){})设置线程      Runnable对象中包含run(){}方法     使用对象.start();调用线程。   12345678910111213141516171819202122232425262728293031">
 <meta name="keywords" content="threads">
 <meta property="og:type" content="article">
 <meta property="og:title" content="多线程">
-<meta property="og:url" content="http://yoursite.com/2019/10/17/多线程/index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;17&#x2F;%E5%A4%9A%E7%BA%BF%E7%A8%8B&#x2F;index.html">
 <meta property="og:site_name" content="Blog of Orange">
-<meta property="og:description" content="线程的构造方法中 new出所需要的线程的个数，setPriority方法设置线程的优先级。    使用 对象=new Thread(new Runnable(){})设置线程    Runnable对象中包含run(){}方法    使用对象.start();调用线程。  12345678910111213141516171819202122232425262728293031323334">
+<meta property="og:description" content="线程的构造方法中 new出所需要的线程的个数，setPriority方法设置线程的优先级。     使用 对象=new Thread(new Runnable(){})设置线程      Runnable对象中包含run(){}方法     使用对象.start();调用线程。   12345678910111213141516171819202122232425262728293031">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-10-17T01:02:50.260Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="多线程">
-<meta name="twitter:description" content="线程的构造方法中 new出所需要的线程的个数，setPriority方法设置线程的优先级。    使用 对象=new Thread(new Runnable(){})设置线程    Runnable对象中包含run(){}方法    使用对象.start();调用线程。  12345678910111213141516171819202122232425262728293031323334">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Orange" type="application/atom+xml">
   
@@ -38,7 +36,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -62,7 +60,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
@@ -71,15 +69,15 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" target="_blank" rel="noopener">友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
     			
             
 		</nav>
@@ -140,7 +138,7 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/photos/">相册</a></li>
 		        
@@ -169,7 +167,7 @@
   
 
         
-        <a href="/2019/10/17/多线程/" class="archive-article-date">
+        <a href="/2019/10/17/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
   	<time datetime="2019-10-17T00:50:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
 </a>
         
@@ -177,7 +175,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="#FF1493" size="3"><br>    线程的构造方法中 new出所需要的线程的个数，setPriority方法设置线程的优先级。<br>    使用 对象=new Thread(new Runnable(){})设置线程<br>    Runnable对象中包含run(){}方法<br>    使用对象.start();调用线程。<br></font>
+        <font color=#FF1493 size=3>
+    线程的构造方法中 new出所需要的线程的个数，setPriority方法设置线程的优先级。
+    使用 对象=new Thread(new Runnable(){})设置线程 
+    Runnable对象中包含run(){}方法
+    使用对象.start();调用线程。
+</font>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">import javax.swing.*;</span><br><span class="line">import java.awt.*;</span><br><span class="line"></span><br><span class="line">public class threads extends JFrame &#123;</span><br><span class="line">	private Thread threadA;</span><br><span class="line">	private Thread threadB;</span><br><span class="line">	private Thread threadC;</span><br><span class="line">	private Thread threadD;</span><br><span class="line">	final JProgressBar progressBar1=new JProgressBar();</span><br><span class="line">	final JProgressBar progressBar2=new JProgressBar();</span><br><span class="line">	final JProgressBar progressBar3=new JProgressBar();</span><br><span class="line">	final JProgressBar progressBar4=new JProgressBar();</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		init(new threads(),1000,1000);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public threads() &#123;</span><br><span class="line">		super();</span><br><span class="line">		getContentPane().add(progressBar1,BorderLayout.NORTH);</span><br><span class="line">		getContentPane().add(progressBar2,BorderLayout.CENTER);</span><br><span class="line">		getContentPane().add(progressBar3,BorderLayout.AFTER_LAST_LINE);</span><br><span class="line">		getContentPane().add(progressBar4,BorderLayout.SOUTH);</span><br><span class="line">		progressBar1.setStringPainted(true);</span><br><span class="line">		progressBar2.setStringPainted(true);</span><br><span class="line">		progressBar3.setStringPainted(true);</span><br><span class="line">		progressBar4.setStringPainted(true);</span><br><span class="line">		threadA=new Thread(new MyThread(progressBar1));</span><br><span class="line">		threadB=new Thread(new MyThread(progressBar2));</span><br><span class="line">		threadC=new Thread(new MyThread(progressBar3));</span><br><span class="line">		threadD=new Thread(new MyThread(progressBar4));</span><br><span class="line">		setPriority(&quot;threadA&quot;,5,threadA);</span><br><span class="line">		setPriority(&quot;threadB&quot;,5,threadB);</span><br><span class="line">		setPriority(&quot;threadC&quot;,4,threadC);</span><br><span class="line">		setPriority(&quot;threadD&quot;,3,threadD);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void setPriority(String threadName,int priority,Thread t) &#123;</span><br><span class="line">		t.setPriority(priority);</span><br><span class="line">		t.setName(threadName);</span><br><span class="line">		t.start();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	private final class MyThread implements Runnable&#123;</span><br><span class="line">		private final JProgressBar bar;</span><br><span class="line">		int count=0;</span><br><span class="line">		private MyThread(JProgressBar bar) &#123;</span><br><span class="line">			this.bar=bar;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		public void run() &#123;</span><br><span class="line">			while(true) &#123;</span><br><span class="line">				bar.setValue(count+=10);</span><br><span class="line">				try &#123;</span><br><span class="line">					Thread.sleep(1000);</span><br><span class="line">				&#125;catch(Exception e) &#123;</span><br><span class="line">					System.out.println(&quot;当前线程被中断&quot;);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void init(JFrame frame,int width,int height) &#123;</span><br><span class="line">		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span><br><span class="line">		frame.setSize(width,height);</span><br><span class="line">		frame.setVisible(true);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
@@ -192,7 +195,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">threads</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">threads</a>
         		</li>
       		
 		</ul>
@@ -218,35 +221,35 @@
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
         <i class="icon icon-share"></i>
       </a>
     </span>
     <span class="tooltip-content">
       <div class="share-wrap">
         <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
             <i class="icon icon-weibo"></i>
           </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
             <i class="icon icon-weixin"></i>
           </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
             <i class="icon icon-qq"></i>
           </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
             <i class="icon icon-douban"></i>
           </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
             <i class="icon icon-qzone"></i>
           </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
             <i class="icon icon-facebook"></i>
           </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
             <i class="icon icon-twitter"></i>
           </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
             <i class="icon icon-google"></i>
           </a>
         </div>
@@ -256,10 +259,10 @@
 </div>
 
 <div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/17/多线程/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/17/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -273,8 +276,17 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/10/22/%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E5%BA%94%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          树的遍历应用
+        
+      </div>
+    </a>
   
-    <a href="/2019/10/10/图的遍历/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2019/10/10/%E5%9B%BE%E7%9A%84%E9%81%8D%E5%8E%86/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">图的遍历</div>
       <i class="icon-circle-right"></i>
     </a>
@@ -286,7 +298,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -372,15 +384,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:friends">友链</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -401,63 +413,67 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">C语言 fopen fclose fgetc fputc</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言 fopen fclose fgetc fputc</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">二分法查找</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">二分法查找</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">I/O流</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">I/O流</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">选择排序 冒泡排序 反转排序 java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">super 访问修饰符</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">super 访问修饰符</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">选择排序 冒泡排序 反转排序 java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">图</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">树</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">接口 抽象类</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">threads</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java应用</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">图</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法 栈</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承 java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">算法 链表</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">接口 抽象类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">继承</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">算法 栈</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">继承 java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">算法 链表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">threads</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">java应用</a>
               </li>
             
             <div class="clearfix"></div>
@@ -465,7 +481,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:

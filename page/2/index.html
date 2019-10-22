@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Blog of Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Blog of Orange">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;page&#x2F;2&#x2F;index.html">
 <meta property="og:site_name" content="Blog of Orange">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog of Orange">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Orange" type="application/atom+xml">
   
@@ -33,7 +32,7 @@
   
 
 </head>
-</html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -57,7 +56,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
 				<li><a href="/photos/">相册</a></li>
 	        
@@ -66,15 +65,15 @@
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)" target="_blank" rel="noopener">所有文章</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" target="_blank" rel="noopener">友链</a>
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
     			
             
 		</nav>
@@ -135,7 +134,7 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 					<li style="width: 33.333333333333336%"><a href="/photos/">相册</a></li>
 		        
@@ -154,28 +153,35 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-洗牌（java）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-sort" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/07/洗牌（java）/">洗牌(java)</a>
+      <a class="article-title" href="/2019/09/09/sort/">sort</a>
     </h1>
   
 
         
-        <a href="/2019/09/07/洗牌（java）/" class="archive-article-date">
-  	<time datetime="2019-09-07T05:59:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+        <a href="/2019/09/09/sort/" class="archive-article-date">
+  	<time datetime="2019-09-09T02:55:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">public class WashCard &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		final int N=52;</span><br><span class="line">		int[] cards=new int[N];</span><br><span class="line">		String cardscolor[]= &#123;&quot;红桃&quot;,&quot;方块&quot;,&quot;黑桃&quot;,&quot;梅花&quot;&#125;;</span><br><span class="line">		String cardsface[]= &#123;&quot;A&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;J&quot;,&quot;Q&quot;,&quot;K&quot;&#125;;</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++)&#123;</span><br><span class="line">			cards[i]=i;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;洗牌前：&quot;);</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++)&#123;</span><br><span class="line">			System.out.print(cardsface[cards[i]%13]+&quot;-&quot;+cardscolor[cards[i]/13]);</span><br><span class="line">			if((i+1)%13==0) &#123;</span><br><span class="line">				System.out.println();</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				System.out.print(&quot;\t&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//洗牌	</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++) &#123;</span><br><span class="line">			int Index=(int)(Math.random()*N);       //	0-51随机数字</span><br><span class="line">			int temp=cards[i];</span><br><span class="line">			cards[i]=cards[Index];</span><br><span class="line">			cards[Index]=temp;</span><br><span class="line">			</span><br><span class="line">			&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;洗牌后：&quot;);</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++)&#123;</span><br><span class="line">			System.out.print(cardsface[cards[i]%13]+&quot;_&quot;+cardscolor[cards[i]/13]);</span><br><span class="line">			if((i+1)%13==0) &#123;</span><br><span class="line">				System.out.println();</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				System.out.print(&quot;\t&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="http://a3.qpic.cn/psb?/V11ymLxQ0unjMi/Y.ZS6ac9kVWrrOA8W1jBEyvBzyYQVgitVrt73oV*PoM!/b/dLYAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=6ALDAAAAAAADFxs!&amp;tl=1&amp;vuin=1442130210&amp;tm=1567857600&amp;sce=60-1-1&amp;rf=viewer_4&quot;" alt="输出结果图"></p>
+        <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a><em>冒泡排序</em></h1><p>思路：<font color=#FFD700 size=3><br>        前一个元素和后一个元素比较，让后交换，每轮选取一个最值。<br></font><br> 代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class MaoPao &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 冒牌排序</span><br><span class="line">		int temp;</span><br><span class="line">		int nums[]= &#123;7,1,2,5,4&#125;;</span><br><span class="line">		for(int i=0;i&lt;nums.length-1;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int j=0;j&lt;nums.length-1;j++) &#123;</span><br><span class="line">				if(nums[j]&gt;nums[j+1]) &#123;</span><br><span class="line">					temp=nums[j];</span><br><span class="line">					nums[j]=nums[j+1];</span><br><span class="line">					nums[j+1]=temp;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		for(int i=0;i&lt;nums.length;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.print(nums[i]+&quot;\t&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a><em>选择排序</em></h1><p>思路：<font color=#9932CC size=3><br>        先创建一个控下标minindex，初值为数组的一个元素的index,然后第i个元素与后面的元素比较，<br>        如果关系成立，则将最小的下标赋给minindex，最后交换。<br></font><br> 代码如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class Select &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 选择排序</span><br><span class="line">		int nums[]= &#123;3,1,2,5,4&#125;;</span><br><span class="line">		int temp;</span><br><span class="line">		for(int i=0;i&lt;nums.length-1;i++)&#123;</span><br><span class="line">			int minindex=i;</span><br><span class="line">			for(int j=i+1;j&lt;nums.length;j++)&#123;</span><br><span class="line">				if(nums[minindex]&gt;nums[j])&#123;</span><br><span class="line">					minindex=j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			temp=nums[minindex];</span><br><span class="line">			nums[minindex]=nums[i];</span><br><span class="line">			nums[i]=temp;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		for(int i=0;i&lt;nums.length;i++) &#123;</span><br><span class="line">			System.out.print(nums[i]+&quot;\t&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="反转排序"><a href="#反转排序" class="headerlink" title="反转排序"></a><em>反转排序</em></h1><p>思路：<font color=#FF1493 size=3><br>        第一个与最后一个元素交换，第二个和倒数第二个交换。。。。以此类推。<br></font><br> 代码如下</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> public class Fanzhuan &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 反转排序</span><br><span class="line">		int temp;</span><br><span class="line">		int nums[]= &#123;3,4,5,6,7&#125;;</span><br><span class="line">		for(int i=0;i&lt;nums.length/2;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			temp=nums[i];</span><br><span class="line">			nums[i]=nums[nums.length-i-1];</span><br><span class="line">			nums[nums.length-i-1]=temp;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		for(int i=0;i&lt;nums.length;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.print(nums[i]+&quot;\t&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -189,7 +195,93 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java应用</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">选择排序 冒泡排序 反转排序 java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/排序（java）//" class="article-tag-list-link color4">排序（java）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/09/sort/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-洗牌（java）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/07/%E6%B4%97%E7%89%8C%EF%BC%88java%EF%BC%89/">洗牌(java)</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/07/%E6%B4%97%E7%89%8C%EF%BC%88java%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2019-09-07T05:59:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">public class WashCard &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		final int N=52;</span><br><span class="line">		int[] cards=new int[N];</span><br><span class="line">		String cardscolor[]= &#123;&quot;红桃&quot;,&quot;方块&quot;,&quot;黑桃&quot;,&quot;梅花&quot;&#125;;</span><br><span class="line">		String cardsface[]= &#123;&quot;A&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;,&quot;10&quot;,&quot;J&quot;,&quot;Q&quot;,&quot;K&quot;&#125;;</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++)&#123;</span><br><span class="line">			cards[i]=i;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;洗牌前：&quot;);</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++)&#123;</span><br><span class="line">			System.out.print(cardsface[cards[i]%13]+&quot;-&quot;+cardscolor[cards[i]/13]);</span><br><span class="line">			if((i+1)%13==0) &#123;</span><br><span class="line">				System.out.println();</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				System.out.print(&quot;\t&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		//洗牌	</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++) &#123;</span><br><span class="line">			int Index=(int)(Math.random()*N);       //	0-51随机数字</span><br><span class="line">			int temp=cards[i];</span><br><span class="line">			cards[i]=cards[Index];</span><br><span class="line">			cards[Index]=temp;</span><br><span class="line">			</span><br><span class="line">			&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">		</span><br><span class="line">		System.out.println(&quot;洗牌后：&quot;);</span><br><span class="line">		for(int i=0;i&lt;cards.length;i++)&#123;</span><br><span class="line">			System.out.print(cardsface[cards[i]%13]+&quot;_&quot;+cardscolor[cards[i]/13]);</span><br><span class="line">			if((i+1)%13==0) &#123;</span><br><span class="line">				System.out.println();</span><br><span class="line">			&#125;else &#123;</span><br><span class="line">				System.out.print(&quot;\t&quot;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;	</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="http://a3.qpic.cn/psb?/V11ymLxQ0unjMi/Y.ZS6ac9kVWrrOA8W1jBEyvBzyYQVgitVrt73oV*PoM!/b/dLYAAAAAAAAA&amp;ek=1&amp;kp=1&amp;pt=0&amp;bo=6ALDAAAAAAADFxs!&amp;tl=1&amp;vuin=1442130210&amp;tm=1567857600&amp;sce=60-1-1&amp;rf=viewer_4%22%3E" alt="输出结果图"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">java应用</a>
         		</li>
       		
 		</ul>
@@ -210,7 +302,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/07/洗牌（java）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/09/07/%E6%B4%97%E7%89%8C%EF%BC%88java%EF%BC%89/">展开全文 >></a>
         </p>
       
 
@@ -224,7 +316,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -247,12 +339,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/29/链表-实现录入学生信息/">链表 实现录入学生信息</a>
+      <a class="article-title" href="/2019/03/29/%E9%93%BE%E8%A1%A8-%E5%AE%9E%E7%8E%B0%E5%BD%95%E5%85%A5%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF/">链表 实现录入学生信息</a>
     </h1>
   
 
         
-        <a href="/2019/03/29/链表-实现录入学生信息/" class="archive-article-date">
+        <a href="/2019/03/29/%E9%93%BE%E8%A1%A8-%E5%AE%9E%E7%8E%B0%E5%BD%95%E5%85%A5%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF/" class="archive-article-date">
   	<time datetime="2019-03-29T04:22:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-29</time>
 </a>
         
@@ -260,7 +352,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <font color="#00ffff" size="3"><br>    功能说明：<br>                学生管理系统<br>                录入学生的姓名和号码<br>                当号码为0时退出录入<br></font>
+        <font color=#00ffff size=3>
+    功能说明：
+                学生管理系统
+                录入学生的姓名和号码
+                当号码为0时退出录入
+</font>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;stdio.h&quot;</span><br><span class="line">#include &quot;stdlib.h&quot;</span><br><span class="line"></span><br><span class="line">//链表</span><br><span class="line"></span><br><span class="line">typedef struct LinkList</span><br><span class="line">&#123;</span><br><span class="line">	char *name;</span><br><span class="line">	int num;</span><br><span class="line">	LinkList *next;</span><br><span class="line">&#125;*LK;</span><br><span class="line"></span><br><span class="line">LinkList *pHead;</span><br><span class="line">int count;</span><br><span class="line">void Creat();</span><br><span class="line">void Print();</span><br><span class="line">void Insert();</span><br><span class="line">void Delete();</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;	</span><br><span class="line">	char a;</span><br><span class="line">	Creat();</span><br><span class="line">	Print();</span><br><span class="line">	</span><br><span class="line">	do</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;请选择	Y：删除	N：插入	其他任意键退出\n&quot;);</span><br><span class="line">		printf(&quot;请输入：&quot;);</span><br><span class="line">		fflush(stdin);</span><br><span class="line">		a=getchar();</span><br><span class="line">		switch (a)</span><br><span class="line">		&#123;</span><br><span class="line">		case &apos;y&apos;:</span><br><span class="line">		case &apos;Y&apos;: </span><br><span class="line">				Delete();</span><br><span class="line">				Print();</span><br><span class="line">			break;</span><br><span class="line">		case &apos;n&apos;:</span><br><span class="line">		case &apos;N&apos;:</span><br><span class="line">				Insert();</span><br><span class="line">				Print();</span><br><span class="line">			break;</span><br><span class="line">		default:</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; while (a==&apos;y&apos;||a==&apos;n&apos;||a==&apos;Y&apos;||a==&apos;N&apos;);	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Creat() //录入函数</span><br><span class="line">&#123;</span><br><span class="line">	pHead = NULL;</span><br><span class="line">	LinkList *pNew;</span><br><span class="line">	LinkList *pEnd;</span><br><span class="line">	count = 0;</span><br><span class="line">	pNew = pEnd = (LinkList*)malloc(sizeof(LinkList));</span><br><span class="line">	while (pNew-&gt;num != 0)</span><br><span class="line">	&#123;	</span><br><span class="line">		count++;</span><br><span class="line">		if (count == 1)</span><br><span class="line">		&#123;</span><br><span class="line">			pHead = pNew;</span><br><span class="line">			pEnd = pNew;</span><br><span class="line">			pNew-&gt;next = NULL;</span><br><span class="line">		&#125;</span><br><span class="line">		else</span><br><span class="line">		&#123;</span><br><span class="line">			pNew = (LinkList*)malloc(sizeof(LinkList));</span><br><span class="line">			pNew-&gt;next = NULL;</span><br><span class="line">			pEnd-&gt;next = pNew;</span><br><span class="line">			pEnd = pNew;</span><br><span class="line">		&#125;</span><br><span class="line">		pNew-&gt;name = (char*)malloc(sizeof(char));</span><br><span class="line">		printf(&quot;请输入学生姓名：&quot;);</span><br><span class="line">		scanf(&quot;%s&quot;,pNew-&gt;name);</span><br><span class="line">		printf(&quot;请输入学生号码：&quot;);</span><br><span class="line">		scanf(&quot;%d&quot;, &amp;pNew-&gt;num);</span><br><span class="line">		printf(&quot;***************************************\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	count--;</span><br><span class="line">	free(pEnd);</span><br><span class="line">&#125;</span><br><span class="line">void Print()	//打印输出函数</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	LinkList *Temp;</span><br><span class="line">	Temp = pHead;</span><br><span class="line">	for (i = 0; i &lt; count; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;#%d\n&quot;, i + 1);</span><br><span class="line">		printf(&quot;学生的姓名为：%s\n&quot;, Temp-&gt;name);</span><br><span class="line">		printf(&quot;学生的号码为：%d\n&quot;, Temp-&gt;num);</span><br><span class="line">		Temp = Temp-&gt;next;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Insert()</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	int j;</span><br><span class="line">	LinkList *Temp;</span><br><span class="line">	LinkList *pNew;</span><br><span class="line">	pNew = (LinkList*)malloc(sizeof(LinkList));</span><br><span class="line">	pNew-&gt;name = (char*)malloc(sizeof(char));</span><br><span class="line">	Temp = pHead;</span><br><span class="line">	if (count!=0)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;请输入先要在第几个元素后面插入：&quot;);</span><br><span class="line">		scanf(&quot;%d&quot;, &amp;i);</span><br><span class="line">		if (i &lt;= 0 || i &gt; count)</span><br><span class="line">		&#123;</span><br><span class="line">			printf(&quot;overflow\n&quot;);</span><br><span class="line">			exit(0);</span><br><span class="line">		&#125;</span><br><span class="line">		for (j = 1; j &lt; i; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			Temp = Temp-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line">		printf(&quot;请输入要插入的学生的姓名：&quot;);</span><br><span class="line">		scanf(&quot;%s&quot;, pNew-&gt;name);</span><br><span class="line">		printf(&quot;请输入要插入的学生的号码：&quot;);</span><br><span class="line">		scanf(&quot;%d&quot;, &amp;pNew-&gt;num);</span><br><span class="line">		pNew-&gt;next = Temp-&gt;next;</span><br><span class="line">		Temp-&gt;next = pNew;</span><br><span class="line">		count++;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;请输入要插入的学生的姓名：&quot;);</span><br><span class="line">		scanf(&quot;%s&quot;, pNew-&gt;name);</span><br><span class="line">		printf(&quot;请输入要插入的学生的号码：&quot;);</span><br><span class="line">		scanf(&quot;%d&quot;, &amp;pNew-&gt;num);</span><br><span class="line">		pNew-&gt;next = NULL;</span><br><span class="line">		pHead = pNew;</span><br><span class="line">		count++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Delete()</span><br><span class="line">&#123;</span><br><span class="line">	int i,x;//来记录状态</span><br><span class="line">	LinkList *Temp1;</span><br><span class="line">	LinkList *Temp2;</span><br><span class="line">	Temp1 = pHead;</span><br><span class="line">	Temp2 = pHead;</span><br><span class="line">	char *name;</span><br><span class="line">	name = (char*)malloc(sizeof(char));</span><br><span class="line">	printf(&quot;请输入要删除的人的姓名：&quot;);</span><br><span class="line">	scanf(&quot;%s&quot;,name);</span><br><span class="line">	if (*name==*(pHead-&gt;name))</span><br><span class="line">	&#123;</span><br><span class="line">		pHead = pHead-&gt;next;</span><br><span class="line">		count--;</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		for (i = 0; i &lt; count; i++)	//找到此人</span><br><span class="line">		&#123;</span><br><span class="line">			if (*(Temp1-&gt;name) != *name)</span><br><span class="line">			&#123;	</span><br><span class="line">				printf(&quot;没有此人\n&quot;);</span><br><span class="line">				x = 1;</span><br><span class="line">			&#125;</span><br><span class="line">			else</span><br><span class="line">			&#123;</span><br><span class="line">				x = 0;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			Temp1 = Temp1-&gt;next;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		</span><br><span class="line">		if (x == 0)</span><br><span class="line">		&#123;</span><br><span class="line">			for (i = 0; i &lt; count; i++)	//找到他前一个人</span><br><span class="line">			&#123;</span><br><span class="line">				if (Temp2-&gt;next == Temp1)</span><br><span class="line">				&#123;</span><br><span class="line">					break;</span><br><span class="line">				&#125;</span><br><span class="line">				Temp2 = Temp2-&gt;next;</span><br><span class="line">			&#125;</span><br><span class="line">			Temp2-&gt;next = Temp1-&gt;next;</span><br><span class="line">			count--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
@@ -275,7 +372,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">算法 链表</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">算法 链表</a>
         		</li>
       		
 		</ul>
@@ -296,7 +393,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/29/链表-实现录入学生信息/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/29/%E9%93%BE%E8%A1%A8-%E5%AE%9E%E7%8E%B0%E5%BD%95%E5%85%A5%E5%AD%A6%E7%94%9F%E4%BF%A1%E6%81%AF/">展开全文 >></a>
         </p>
       
 
@@ -310,7 +407,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -333,12 +430,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/28/栈的应用-进制转换/">栈的应用---进制转换</a>
+      <a class="article-title" href="/2019/03/28/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">栈的应用---进制转换</a>
     </h1>
   
 
         
-        <a href="/2019/03/28/栈的应用-进制转换/" class="archive-article-date">
+        <a href="/2019/03/28/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/" class="archive-article-date">
   	<time datetime="2019-03-28T11:34:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
 </a>
         
@@ -346,7 +443,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>思路：<font color="#FFD700" size="3"><br>    1.创建一个空栈<br>    2.将计算的结果循环入栈<br>    3.将计算的结果循环出栈<br></font></p>
+        <p>思路：<font color=#FFD700 size=3><br>    1.创建一个空栈<br>    2.将计算的结果循环入栈<br>    3.将计算的结果循环出栈<br></font></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">/////////10进制转2进制</span><br><span class="line"></span><br><span class="line">#include &quot;stdafx.h&quot;</span><br><span class="line">#include &quot;stdio.h&quot;</span><br><span class="line">#include &quot;stdlib.h&quot;</span><br><span class="line">#define Stack_init_size 100</span><br><span class="line">#define ADDstack	10</span><br><span class="line"></span><br><span class="line">//创建一个栈 数据类型</span><br><span class="line">typedef struct Sqstack</span><br><span class="line">&#123;</span><br><span class="line">	int *top;</span><br><span class="line">	int *base;</span><br><span class="line">	int stacksize;</span><br><span class="line">&#125;stack;</span><br><span class="line">//初始化一个栈 （构造一个空栈）</span><br><span class="line">void InitStack(Sqstack);</span><br><span class="line">//找到栈顶的函数</span><br><span class="line">int GetTop(Sqstack);</span><br><span class="line">//入栈函数</span><br><span class="line">int Push(Sqstack,int);</span><br><span class="line">//出栈函数</span><br><span class="line">int OutStack(Sqstack,int);</span><br><span class="line"></span><br><span class="line">int _tmain(int argc, _TCHAR* argv[])</span><br><span class="line">&#123;</span><br><span class="line">	int x,y;</span><br><span class="line">	printf(&quot;请输入要转换的数：&quot;);</span><br><span class="line">	scanf(&quot;%d&quot;, &amp;x);</span><br><span class="line">	void InitStack(Sqstack stack);</span><br><span class="line">	do&#123;</span><br><span class="line">		y = x % 2;</span><br><span class="line">		x = x / 2;</span><br><span class="line">		int Push(Sqstack stack, int y);</span><br><span class="line">		int OutStack(Sqstack stack, int x);</span><br><span class="line">		printf(&quot;%d\t&quot;, y);</span><br><span class="line"></span><br><span class="line">	&#125; while (x != 0);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void Initstack(Sqstack stack)</span><br><span class="line">&#123;</span><br><span class="line">	stack.base = (int*)malloc(Stack_init_size * sizeof(int));		//动态分配内存</span><br><span class="line">	if (!stack.base)	//	判断栈是否存在</span><br><span class="line">	&#123; </span><br><span class="line">		exit(0); </span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	stack.top = stack.base;</span><br><span class="line">	stack.stacksize = Stack_init_size;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int GetTop(Sqstack stack)</span><br><span class="line">&#123;</span><br><span class="line">	int num;</span><br><span class="line">	if (stack.base = stack.top) return -1;		//取余不可能出现负1 所以-1表示错误标志</span><br><span class="line">	num = *(stack.top - 1);</span><br><span class="line">	return num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int Push(Sqstack stack, int num)</span><br><span class="line">&#123;</span><br><span class="line">	if (stack.top - stack.base &gt;= stack.stacksize)	//	判段栈是否为满栈</span><br><span class="line">	&#123;</span><br><span class="line">		stack.base = (int*)realloc(stack.base, (Stack_init_size + ADDstack)*sizeof(int));</span><br><span class="line">		if (!stack.base)exit(0);</span><br><span class="line">		stack.top = stack.base + stack.stacksize;</span><br><span class="line">		stack.stacksize += ADDstack;</span><br><span class="line">	&#125;</span><br><span class="line">	*stack.top++ = num;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line">int OutStack(Sqstack stack, int num)</span><br><span class="line">&#123;</span><br><span class="line">	if (stack.base == stack.top) return -2;	//	判断栈是否为空栈</span><br><span class="line">	num = *--stack.top;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
@@ -361,7 +458,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">算法 栈</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">算法 栈</a>
         		</li>
       		
 		</ul>
@@ -382,7 +479,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/28/栈的应用-进制转换/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/28/%E6%A0%88%E7%9A%84%E5%BA%94%E7%94%A8-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2/">展开全文 >></a>
         </p>
       
 
@@ -396,7 +493,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -419,12 +516,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/28/C语言-关于文件操作-3/">C语言 关于文件操作(3)</a>
+      <a class="article-title" href="/2019/03/28/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-3/">C语言 关于文件操作(3)</a>
     </h1>
   
 
         
-        <a href="/2019/03/28/C语言-关于文件操作-3/" class="archive-article-date">
+        <a href="/2019/03/28/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-3/" class="archive-article-date">
   	<time datetime="2019-03-28T05:04:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-28</time>
 </a>
         
@@ -432,18 +529,22 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="文件随机读写函数"><a href="#文件随机读写函数" class="headerlink" title="文件随机读写函数"></a><em>文件随机读写函数</em></h1><p><strong>1.读入</strong><br>            函数原型：    int fread(void <em>ptr,int size,int count,FILE </em>fp);<br>            函数功能：    fread()函数的功能是在fp指定的文件中读取count次数据项（每次size个字节）<br>                        存放到以ptr所指的内存单元地址中去。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
+        <h1 id="文件随机读写函数"><a href="#文件随机读写函数" class="headerlink" title="文件随机读写函数"></a><em>文件随机读写函数</em></h1><p><strong>1.读入</strong><br>            函数原型：    int fread(void *ptr,int size,int count,FILE *fp);<br>            函数功能：    fread()函数的功能是在fp指定的文件中读取count次数据项（每次size个字节）<br>                        存放到以ptr所指的内存单元地址中去。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fread(f,4,2,fp);</span><br></pre></td></tr></table></figure>
-<p>此函数从fp所指向的文件中读入2个4个字节的数据，存储到数组f中，若写入成功，此函数返回值为2。<br><strong>2.写入</strong><br>            函数原型：    int fwrite(void <em>ptr,int size,int count,FILE </em>fp);<br>            函数功能：    fwrite()函数的功能是将从ptr为首地址的内存中取出count次数据项（每次size个字节）<br>                        写入fp所指的磁盘文件中。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
+
+<p>此函数从fp所指向的文件中读入2个4个字节的数据，存储到数组f中，若写入成功，此函数返回值为2。<br><strong>2.写入</strong><br>            函数原型：    int fwrite(void *ptr,int size,int count,FILE *fp);<br>            函数功能：    fwrite()函数的功能是将从ptr为首地址的内存中取出count次数据项（每次size个字节）<br>                        写入fp所指的磁盘文件中。<br>            返回值：    成功返回读入的块数，出错或者到尾部，返回0。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fwrite(butter,16,64,fp);</span><br></pre></td></tr></table></figure>
+
 <p>此函数从fp所指向的文件中读入2个4个字节的数据，存储到数组f中去，若写入成功，此函数返回值为2。</p>
 <h1 id="文件的定位"><a href="#文件的定位" class="headerlink" title="文件的定位"></a><em>文件的定位</em></h1><p><strong>1.fseek函数</strong><br>            函数原型：    int fseek(FILE *fp,long offset,int from);<br>            函数功能：    用来控制文件的指针移动。<br>            from：        起始位置。文件首部,当前位置和文件尾部分别对应0，1，2；或者常量 SEEK_SET,SEEK_CUR,<br>                        SEEK_END。<br>            offset：    以起始点为基点，向前移动的字节数。<br>            返回值：    定位成功为0，不成功为非0的整数值。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fseek(fp,100L,0);</span><br></pre></td></tr></table></figure>
+
 <p>将位置指针移动到离头文件100个字节处。</p>
 <p><strong>2.ftell函数</strong><br>            函数原型：    long ftell(FILE *fp);<br>            函数功能：    获取当前文件指针的位置，即相对于文件开头的位移量（字节数）。<br>            返回值：    成功时，值大于等于0，即文件指针的当前指向。出错时，返回-1L。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = ftell(fp);</span><br><span class="line">if(i==-1L) printf(&quot;error\n&quot;);</span><br></pre></td></tr></table></figure>
-<p><strong>3.rewind()函数</strong><br>            函数原型：    void rewind(FILE <em>fp);<br>            函数功能：    定位文件指针，使文件指针指向读写文件的首地址，即打开文件时文件<br>                        指针所指向的位置。<br><strong>4.feof()函数</strong><br>            函数原型：    int feof(FILE </em>fp);<br>            函数功能：    判断fp指针是否到文件尾部。<br>            返回值：    返回值为1，表示到文件结束位置；返回值为0，表示文件未结束。</p>
-<h1 id="文件的错误检测"><a href="#文件的错误检测" class="headerlink" title="文件的错误检测"></a><em>文件的错误检测</em></h1><p><strong>1.ferror函数</strong><br>            函数原型：    int ferror(FILE <em>fp);<br>            函数功能：    用来检查文件在用各种输入输出函数进行读写时是否出错。文件指针<br>                        必须是已经定义过的。<br>            返回值：    若返回值为0，表示未出错，否则表示有错。<br>            说明：        在调用一个输入输出函数后立即检查ferror函数的值，否则信息会丢失。<br>                        在执行fopen函数时，ferror函数的初始值自动置为0。<br><strong>2.clearerr函数</strong><br>            函数原型：    void clearerr(FILE </em>fp);<br>            函数功能：    用来清除出错标志和文件结束标志，使它们为0。<br>            说明：        出错后，错误标志一直保留，直到对同一文件调用clearerr(fp)或rewind<br>                        或任何其他一个输入输出函数。</p>
+
+<p><strong>3.rewind()函数</strong><br>            函数原型：    void rewind(FILE <em>fp);<br>            函数功能：    定位文件指针，使文件指针指向读写文件的首地址，即打开文件时文件<br>                        指针所指向的位置。<br>*</em>4.feof()函数**<br>            函数原型：    int feof(FILE *fp);<br>            函数功能：    判断fp指针是否到文件尾部。<br>            返回值：    返回值为1，表示到文件结束位置；返回值为0，表示文件未结束。</p>
+<h1 id="文件的错误检测"><a href="#文件的错误检测" class="headerlink" title="文件的错误检测"></a><em>文件的错误检测</em></h1><p><strong>1.ferror函数</strong><br>            函数原型：    int ferror(FILE <em>fp);<br>            函数功能：    用来检查文件在用各种输入输出函数进行读写时是否出错。文件指针<br>                        必须是已经定义过的。<br>            返回值：    若返回值为0，表示未出错，否则表示有错。<br>            说明：        在调用一个输入输出函数后立即检查ferror函数的值，否则信息会丢失。<br>                        在执行fopen函数时，ferror函数的初始值自动置为0。<br>*</em>2.clearerr函数**<br>            函数原型：    void clearerr(FILE *fp);<br>            函数功能：    用来清除出错标志和文件结束标志，使它们为0。<br>            说明：        出错后，错误标志一直保留，直到对同一文件调用clearerr(fp)或rewind<br>                        或任何其他一个输入输出函数。</p>
 
       
 
@@ -457,7 +558,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
         		</li>
       		
 		</ul>
@@ -467,7 +568,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/28/C语言-关于文件操作-3/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/28/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-3/">展开全文 >></a>
         </p>
       
 
@@ -481,7 +582,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -504,12 +605,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/27/C语言-关于文件操作-2/">C语言 关于文件操作(2)</a>
+      <a class="article-title" href="/2019/03/27/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-2/">C语言 关于文件操作(2)</a>
     </h1>
   
 
         
-        <a href="/2019/03/27/C语言-关于文件操作-2/" class="archive-article-date">
+        <a href="/2019/03/27/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-2/" class="archive-article-date">
   	<time datetime="2019-03-27T07:05:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
 </a>
         
@@ -517,11 +618,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="字符串方式文件读写函数"><a href="#字符串方式文件读写函数" class="headerlink" title="字符串方式文件读写函数"></a><em>字符串方式文件读写函数</em></h1><p><strong>1.字符串的读入</strong><br>    fgets函数<br>    函数原型：char <em>fgets(char </em>s,int n,FILE *fp)<br>    功能：    fgets()从fp所指文件读n-1个字符送入s(可以是字符数组名)指向的内存区，并自动在<br>            最后加一个’\0’。<br>    返回值：正常，返回字符串的首地址；出错或文件尾，返回NULL。</p>
-<p><strong>2.fputs函数</strong><br>    函数原型：int fputs(char <em>s,FILE </em>fp)<br>    功能：    把s所指向的字符串写入fp指向的文件，字符串的结束符’\0’不写入文件。<br>    返回值：正常，返回最后一个写入的字符，出错为EOF。</p>
+        <h1 id="字符串方式文件读写函数"><a href="#字符串方式文件读写函数" class="headerlink" title="字符串方式文件读写函数"></a><em>字符串方式文件读写函数</em></h1><p><strong>1.字符串的读入</strong><br>    fgets函数<br>    函数原型：char *fgets(char *s,int n,FILE *fp)<br>    功能：    fgets()从fp所指文件读n-1个字符送入s(可以是字符数组名)指向的内存区，并自动在<br>            最后加一个’\0’。<br>    返回值：正常，返回字符串的首地址；出错或文件尾，返回NULL。</p>
+<p><strong>2.fputs函数</strong><br>    函数原型：int fputs(char *s,FILE *fp)<br>    功能：    把s所指向的字符串写入fp指向的文件，字符串的结束符’\0’不写入文件。<br>    返回值：正常，返回最后一个写入的字符，出错为EOF。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">char str[20];</span><br><span class="line">if((fp=fopen(&quot;F:\\f1.txt&quot;,&quot;w+&quot;))==NULL)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;can not open file&quot;);</span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br><span class="line">printf(&quot;input a string\n&quot;);</span><br><span class="line">while(strlen(gets(str))&gt;0)</span><br><span class="line">&#123;</span><br><span class="line">	fputs(str,fp);</span><br><span class="line">&#125;				</span><br><span class="line">rewind(fp);</span><br><span class="line">while(fgets(str,20,fp)!=NULL)</span><br><span class="line">&#123;</span><br><span class="line">	fputs(str,stdout);		//相当于puts(str);</span><br><span class="line">&#125;</span><br><span class="line">fclose(fp);</span><br></pre></td></tr></table></figure>
-<h1 id="格式化文件读写"><a href="#格式化文件读写" class="headerlink" title="格式化文件读写"></a><em>格式化文件读写</em></h1><p><strong>1.读入</strong><br>    函数原型：int fscanf(FILE *fp,格式控制串，输入列表)<br>    功能：    fscanf()函数的功能是从fp指向的文件中，按格式控制串中的控制符读取相应数据赋给输入列表中对应的变量地址中。<br>    返回值：成功，返回读入的个数，出错或文件尾，返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	int n;</span><br><span class="line">	float x;</span><br><span class="line">	fp=fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;);</span><br><span class="line">	fscanf(fp,&quot;%d%f&quot;,&amp;n,&amp;x);//表示从文件f1.txt中分别读入整形数到变量n，浮点数到变量x。</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.写入</strong><br>    函数原型：int fprintf(FILE *fp,格式控制串，输出列表)<br>    功能：    fprintf()函数的功能是按格式控制串中的控制符把相应数据写入fp指向的文件中。<br>    返回值：成功，返回写入的个数，出错或文件尾，返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">int n;</span><br><span class="line">float x;</span><br><span class="line">fp=fopen(&quot;F:\\f1.txt&quot;,&quot;w&quot;);</span><br><span class="line">fprintf(fp,&quot;%d%f&quot;,n,x);</span><br><span class="line">//表示把变量n和x的数值写入文件f1.txt。</span><br></pre></td></tr></table></figure></p>
+
+<h1 id="格式化文件读写"><a href="#格式化文件读写" class="headerlink" title="格式化文件读写"></a><em>格式化文件读写</em></h1><p><strong>1.读入</strong><br>    函数原型：int fscanf(FILE *fp,格式控制串，输入列表)<br>    功能：    fscanf()函数的功能是从fp指向的文件中，按格式控制串中的控制符读取相应数据赋给输入列表中对应的变量地址中。<br>    返回值：成功，返回读入的个数，出错或文件尾，返回EOF。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	int n;</span><br><span class="line">	float x;</span><br><span class="line">	fp=fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;);</span><br><span class="line">	fscanf(fp,&quot;%d%f&quot;,&amp;n,&amp;x);//表示从文件f1.txt中分别读入整形数到变量n，浮点数到变量x。</span><br></pre></td></tr></table></figure>
+<p><strong>2.写入</strong><br>    函数原型：int fprintf(FILE *fp,格式控制串，输出列表)<br>    功能：    fprintf()函数的功能是按格式控制串中的控制符把相应数据写入fp指向的文件中。<br>    返回值：成功，返回写入的个数，出错或文件尾，返回EOF。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">int n;</span><br><span class="line">float x;</span><br><span class="line">fp=fopen(&quot;F:\\f1.txt&quot;,&quot;w&quot;);</span><br><span class="line">fprintf(fp,&quot;%d%f&quot;,n,x);</span><br><span class="line">//表示把变量n和x的数值写入文件f1.txt。</span><br></pre></td></tr></table></figure>
 
       
 
@@ -535,7 +639,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C语言 fgets fputs fscanf fprintf</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">C语言 fgets fputs fscanf fprintf</a>
         		</li>
       		
 		</ul>
@@ -545,7 +649,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/27/C语言-关于文件操作-2/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/27/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-2/">展开全文 >></a>
         </p>
       
 
@@ -559,7 +663,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -582,12 +686,12 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/27/C语言-关于文件操作-1/">C语言 关于文件操作(1)</a>
+      <a class="article-title" href="/2019/03/27/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-1/">C语言 关于文件操作(1)</a>
     </h1>
   
 
         
-        <a href="/2019/03/27/C语言-关于文件操作-1/" class="archive-article-date">
+        <a href="/2019/03/27/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-1/" class="archive-article-date">
   	<time datetime="2019-03-27T02:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
 </a>
         
@@ -596,64 +700,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="文件的打开与关闭"><a href="#文件的打开与关闭" class="headerlink" title="文件的打开与关闭"></a><em>文件的打开与关闭</em></h1><p><strong>1.文件的打开</strong><br>    fopen函数<br>    调用格式：<br>                FILE *fp;<br>                fp=fopen(“文件的路径”,”文件的打开方式”)；<br>                功能：fopen()打开一个指向文件名的文件夹，文件操作方式由打开方式的值决定。<br>                返回值：正常打开时，返回一个指向该文件结构体的指针；若错误，返回错误标志NULL<br>                文件打开方式：</p>
-<table>
-<thead>
-<tr>
-<th>文本文件</th>
-<th></th>
-<th>二进制文件</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>使用方式</td>
-<td>含义</td>
-<td>使用方式</td>
-<td>含义</td>
-</tr>
-<tr>
-<td>“r”</td>
-<td>打开文件进行只读</td>
-<td>“rb”</td>
-<td>打开二进制文件进行只读</td>
-</tr>
-<tr>
-<td>“w”</td>
-<td>建立新文本进行只读</td>
-<td>“wb”</td>
-<td>建立新二进制文件进行只读</td>
-</tr>
-<tr>
-<td>“a”</td>
-<td>打开文本进行追加</td>
-<td>“ab”</td>
-<td>打开二进制文件进行追加</td>
-</tr>
-<tr>
-<td>“r+”</td>
-<td>打开文本文件进行读/写</td>
-<td>“rb+”</td>
-<td>打开二进制文件进行读/写</td>
-</tr>
-<tr>
-<td>“w+”</td>
-<td>建立新文本进行读/写</td>
-<td>“wb+”</td>
-<td>建立新二进制文件进行读/写</td>
-</tr>
-<tr>
-<td>“a+”</td>
-<td>打开文本进行读/写/追加</td>
-<td>“ab+”</td>
-<td>打开二进制文件进行读/写/追加</td>
-</tr>
-</tbody>
-</table>
-<p>为了保证文件操作可靠性，一般在调用函数时做个判断。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if((fp = fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;))==NULL)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;File open error!\n&quot;);</span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>2.文件的关闭</strong><br>    fclose()函数<br>    调用格式：<br>                fclose(文件指针);<br>                功能：关闭打开的文件<br>                返回值：若成功关闭，返回一个0值，否则返回一个非零值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(fclose(fp))</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;Can not close the file!\n&quot;);</span><br><span class="line">	exig(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>| 文本文件|                       |二进制文件|                            |<br>|———————————|—————————————|<br>| 使用方式| 含义                  | 使用方式| 含义                        |<br>| “r”     | 打开文件进行只读      | “rb”    | 打开二进制文件进行只读      |<br>| “w”     | 建立新文本进行只读    | “wb”    | 建立新二进制文件进行只读    |<br>| “a”     | 打开文本进行追加      | “ab”    | 打开二进制文件进行追加      |<br>| “r+”    | 打开文本文件进行读/写 | “rb+”   | 打开二进制文件进行读/写     |<br>| “w+”    | 建立新文本进行读/写   | “wb+”    | 建立新二进制文件进行读/写  |<br>| “a+”    | 打开文本进行读/写/追加| “ab+”   | 打开二进制文件进行读/写/追加|</p>
+<p>为了保证文件操作可靠性，一般在调用函数时做个判断。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if((fp = fopen(&quot;F:\\f1.txt&quot;,&quot;r&quot;))==NULL)</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;File open error!\n&quot;);</span><br><span class="line">	exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>2.文件的关闭</strong><br>    fclose()函数<br>    调用格式：<br>                fclose(文件指针);<br>                功能：关闭打开的文件<br>                返回值：若成功关闭，返回一个0值，否则返回一个非零值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(fclose(fp))</span><br><span class="line">&#123;</span><br><span class="line">	printf(&quot;Can not close the file!\n&quot;);</span><br><span class="line">	exig(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="文件的读写"><a href="#文件的读写" class="headerlink" title="文件的读写"></a><em>文件的读写</em></h1><p><strong>1.字符的读入</strong><br>    fgetc函数<br>        函数原型：int fgetc(FILE *fp)<br>        功能：从fp指向的文件中读取一字节代码。<br>        返回值：正常，返回读到的代码值；读到尾部或者出错，为EOF。<br>        //EOF为常量，其值为-1（EOF在 stdio.h 中有说明）</p>
-<p><strong>2.字符的写入</strong><br>    fputc函数<br>    函数原型：int fputc(int c,FILE *fp)<br>    功能：把一个字节c写入fp指向的文件中。<br>    返回值：正常，返回c;出错返回EOF。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	char c;</span><br><span class="line">	int i;</span><br><span class="line">	fp = fopen(&quot;F://f1.txt&quot;, &quot;w+&quot;);</span><br><span class="line">	if (fp == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;file open error!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;input a string\n&quot;);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != &apos;#&apos;)	/*输入字符以#结束*/</span><br><span class="line">	&#123;</span><br><span class="line">		fputc(c, fp);	/*将输入的字符写入文件*/</span><br><span class="line">		c = getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	rewind(fp);			/*用于把指针fp所指的文件的内部位置的指针移动到文件头*/</span><br><span class="line">	fflush(stdin);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != EOF)	/*读文件，并测试是否到文件尾巴*/</span><br><span class="line">	&#123;</span><br><span class="line">		putchar(c);</span><br><span class="line">		c = fgetc(fp);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if (fclose(fp))		/*正常关闭*/</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;can not close the fil!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	fputc(&apos;b&apos;, fp);</span><br><span class="line">	fclose(fp);</span><br></pre></td></tr></table></figure></p>
+<p><strong>2.字符的写入</strong><br>    fputc函数<br>    函数原型：int fputc(int c,FILE *fp)<br>    功能：把一个字节c写入fp指向的文件中。<br>    返回值：正常，返回c;出错返回EOF。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">	char c;</span><br><span class="line">	int i;</span><br><span class="line">	fp = fopen(&quot;F://f1.txt&quot;, &quot;w+&quot;);</span><br><span class="line">	if (fp == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;file open error!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;input a string\n&quot;);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != &apos;#&apos;)	/*输入字符以#结束*/</span><br><span class="line">	&#123;</span><br><span class="line">		fputc(c, fp);	/*将输入的字符写入文件*/</span><br><span class="line">		c = getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	rewind(fp);			/*用于把指针fp所指的文件的内部位置的指针移动到文件头*/</span><br><span class="line">	fflush(stdin);</span><br><span class="line">	c = getchar();</span><br><span class="line">	while (c != EOF)	/*读文件，并测试是否到文件尾巴*/</span><br><span class="line">	&#123;</span><br><span class="line">		putchar(c);</span><br><span class="line">		c = fgetc(fp);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	if (fclose(fp))		/*正常关闭*/</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;can not close the fil!\n&quot;);</span><br><span class="line">		exit(0);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	fputc(&apos;b&apos;, fp);</span><br><span class="line">	fclose(fp);</span><br></pre></td></tr></table></figure>
 
       
 
@@ -667,7 +721,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言 fopen fclose fgetc fputc</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">C语言 fopen fclose fgetc fputc</a>
         		</li>
       		
 		</ul>
@@ -677,7 +731,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/03/27/C语言-关于文件操作-1/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/27/C%E8%AF%AD%E8%A8%80-%E5%85%B3%E4%BA%8E%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C-1/">展开全文 >></a>
         </p>
       
 
@@ -691,7 +745,7 @@
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
                 <i class="icon-font icon-back"></i>
             </a>
             <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
@@ -709,7 +763,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
@@ -775,15 +829,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:friends">友链</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" target="_blank" rel="noopener" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -804,63 +858,67 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">C语言 fopen fclose fgetc fputc</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言 fopen fclose fgetc fputc</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">二分法查找</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">二分法查找</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">C语言 fgets fputs fscanf fprintf</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">I/O流</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">I/O流</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">选择排序 冒泡排序 反转排序 java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">fread fwrite fseek ftell rewind feof ferror clearerr</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">super 访问修饰符</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">super 访问修饰符</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">选择排序 冒泡排序 反转排序 java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">图</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">树</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">接口 抽象类</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">threads</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java应用</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">图</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">算法 栈</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承 java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">算法 链表</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">接口 抽象类</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">继承</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">算法 栈</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">继承 java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">算法 链表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">threads</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">java应用</a>
               </li>
             
             <div class="clearfix"></div>
@@ -868,7 +926,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         </div>
         <ul class="search-ul">
           <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br> npm i hexo-generator-json-content --save<br><br>
+            缺失模块。<br/>1、请确保node版本大于6.2<br/>2、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
             3、在根目录_config.yml里添加配置：
 <pre style="font-size: 12px;" q-show="jsonFail">
   jsonContent:
