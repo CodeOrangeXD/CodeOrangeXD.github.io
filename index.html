@@ -153,6 +153,99 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-线性表的基本操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/26/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">线性表的基本操作</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/26/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2019-10-26T05:51:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <font color=#FF1493 size=3>
+    环境 vs2015
+    线性表的基本操作  
+</font>
+
+<p>头文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#pragma once</span><br><span class="line">#define bool int</span><br><span class="line">#define LIST_INT_SIZE 100		//初始尺寸为100	B</span><br><span class="line">#define LIST_INCREAMENT 10		//每次增量为10	B</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">typedef enum Status&#123;</span><br><span class="line">	success, fail, fatal, range_error</span><br><span class="line">&#125;Status;</span><br><span class="line">typedef int ElemType;		//假设处理的数据类型为整形</span><br><span class="line"></span><br><span class="line">typedef struct SqList&#123;</span><br><span class="line">	ElemType *elem;</span><br><span class="line">	int length;</span><br><span class="line">	int list_size;</span><br><span class="line">&#125;SqList, *Ptr, *SqListPtr;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Status List_Init(SqListPtr L); </span><br><span class="line">void List_Destory(SqListPtr L); </span><br><span class="line">void List_Clear(SqListPtr L);</span><br><span class="line">bool List_Empty(SqListPtr L); </span><br><span class="line">int List_Size(SqListPtr L);</span><br><span class="line">Status List_Retrival(SqListPtr L, int pos, ElemType *elem);</span><br><span class="line">Status List_Locate(SqListPtr L, ElemType elem, int *pos); </span><br><span class="line">Status List_Insert(SqListPtr L, int pos, ElemType elem);</span><br><span class="line">Status List_delete(SqListPtr L, int pos); </span><br><span class="line">Status List_Prior(SqListPtr L, int pos, ElemType * elem); </span><br><span class="line">Status List_Next(SqListPtr L, int pos, ElemType *elem);</span><br></pre></td></tr></table></figure>
+
+<p>.c文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">#include&lt;stdlib.h&gt;</span><br><span class="line">#include&quot;SqList.h&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//初始化线性表</span><br><span class="line">Status List_Init(SqListPtr L)		</span><br><span class="line">&#123;</span><br><span class="line">	Status s = fail;</span><br><span class="line">	if (L == NULL)</span><br><span class="line">	&#123;</span><br><span class="line">		L-&gt;elem = (ElemType*)malloc((LIST_INT_SIZE+1)*sizeof(ElemType));</span><br><span class="line">		if (L-&gt;elem)</span><br><span class="line">		&#123;</span><br><span class="line">			L-&gt;list_size = LIST_INT_SIZE;</span><br><span class="line">			L-&gt;length = 0;</span><br><span class="line">			s = success;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//归还线性表</span><br><span class="line">void List_Destory(SqListPtr L)</span><br><span class="line">&#123;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		if (L-&gt;elem)</span><br><span class="line">		&#123;</span><br><span class="line">			free(L-&gt;elem);</span><br><span class="line">			L-&gt;elem = NULL;</span><br><span class="line">			L-&gt;length = 0;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//清空线性表</span><br><span class="line">void List_Clear(SqListPtr L)</span><br><span class="line">&#123;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		L-&gt;length = 0;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//判断线性表是否为空</span><br><span class="line">bool List_Empty(SqListPtr L)</span><br><span class="line">&#123;</span><br><span class="line">	return L-&gt;length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//线性表的长度</span><br><span class="line">int List_Size(SqListPtr L)</span><br><span class="line">&#123;</span><br><span class="line">	return L-&gt;length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//在线性表L的pos这个位置读取元素 将元素放入elem变量中</span><br><span class="line">Status List_Retrival(SqListPtr L, int pos, ElemType *elem)</span><br><span class="line">&#123;</span><br><span class="line">	Status s = range_error;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		if (pos&gt;=0 &amp;&amp; pos &lt;= L-&gt;length)</span><br><span class="line">		&#123;</span><br><span class="line">			*elem = L-&gt;elem[pos];</span><br><span class="line">			s = success;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//在线性表L当中 查找elem元素 如果找到了 将位置放入pos里</span><br><span class="line">Status List_Locate(SqListPtr L, ElemType elem, int *pos)</span><br><span class="line">&#123;</span><br><span class="line">	Status s = range_error;</span><br><span class="line">	int i = 1;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		for (i = 1; i &lt;= L-&gt;length;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			if (L-&gt;elem[i] == elem)</span><br><span class="line">			&#123;</span><br><span class="line">				*pos = i;</span><br><span class="line">				s = success;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return	s;		  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//在线性表L当中 第pos个位置插入元素elem</span><br><span class="line">Status List_Insert(SqListPtr L, int pos, ElemType elem)</span><br><span class="line">&#123;</span><br><span class="line">	Status s = range_error;</span><br><span class="line">	int i;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		if (pos &gt;= 1 &amp;&amp; pos&lt;=L-&gt;length+1)</span><br><span class="line">		&#123;</span><br><span class="line">			if (L-&gt;length &lt; L-&gt;list_size)</span><br><span class="line">			&#123;</span><br><span class="line">				for ( i = L-&gt;length; i &gt;= pos; i--)</span><br><span class="line">				&#123;</span><br><span class="line">					L-&gt;elem[i + 1] = L-&gt;elem[i];</span><br><span class="line">					L-&gt;elem[i] = pos;</span><br><span class="line">					L-&gt;length = L-&gt;length + 1;</span><br><span class="line">					s = success;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//在线性表L当中 删除pos位置的元素</span><br><span class="line">Status List_delete(SqListPtr L, int pos)</span><br><span class="line">&#123;</span><br><span class="line">	Status s = range_error;</span><br><span class="line">	int i;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		if (pos &gt;= 1 &amp;&amp; pos&lt;=L-&gt;length)</span><br><span class="line">		&#123;</span><br><span class="line">			for ( i = pos; i &lt;= L-&gt;length; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				L-&gt;elem[i - 1] = L-&gt;elem[i];</span><br><span class="line">				L-&gt;length--;</span><br><span class="line">				s = success;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//在线性表L当中 查找pos位置的前驱 放入elem当中</span><br><span class="line">Status List_Prior(SqListPtr L, int pos, ElemType * elem)</span><br><span class="line">&#123;</span><br><span class="line">	Status s = range_error;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		if (pos &gt;= 2 &amp;&amp; pos&lt;=L-&gt;length)</span><br><span class="line">		&#123;</span><br><span class="line">			*elem = L-&gt;elem[pos - 1];</span><br><span class="line">			s = success;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//在线性表L当中 查找pos位置的后继 放入elem当中</span><br><span class="line">Status List_Next(SqListPtr L, int pos, ElemType *elem)</span><br><span class="line">&#123;</span><br><span class="line">	Status s = range_error;</span><br><span class="line">	if (L)</span><br><span class="line">	&#123;</span><br><span class="line">		if (pos &gt;= 1 &amp;&amp; pos&lt; L-&gt;length)</span><br><span class="line">		&#123;</span><br><span class="line">			*elem = L-&gt;elem[pos + 1];</span><br><span class="line">			s = success;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">c</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/26/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-树的遍历应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -743,7 +836,40 @@
 </font>
 
 
-<p>| 访问包的位置    |   类   |   修饰   |   符  |<br>|—————–|—————————|<br>|                 | private| protected| public|<br>| 本类              | 可见   | 可见      | 可见  |<br>| 同包其他类或子类|    不可见 | 可见      | 可见  |<br>| 其他包的类或子类| 不可见 | 不可见   | 可见  |</p>
+<table>
+<thead>
+<tr>
+<th>访问包的位置</th>
+<th>类</th>
+<th>修饰</th>
+<th>符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>private</td>
+<td>protected</td>
+<td>public</td>
+</tr>
+<tr>
+<td>本类</td>
+<td>可见</td>
+<td>可见</td>
+<td>可见</td>
+</tr>
+<tr>
+<td>同包其他类或子类</td>
+<td>不可见</td>
+<td>可见</td>
+<td>可见</td>
+</tr>
+<tr>
+<td>其他包的类或子类</td>
+<td>不可见</td>
+<td>不可见</td>
+<td>可见</td>
+</tr>
+</tbody></table>
 <p>代码如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public class demo extends demo1 &#123;</span><br><span class="line">	demo(int x,int y,int z)&#123;</span><br><span class="line">		super(x,y,z);</span><br><span class="line">	&#125;</span><br><span class="line">	demo()&#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		demo jc=new demo(1,100,1000);</span><br><span class="line">		demo jz=new demo();</span><br><span class="line">		System.out.println(jc.y);</span><br><span class="line">		System.out.println(jc.z);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class demo1&#123;</span><br><span class="line">	private int x=0;</span><br><span class="line">	protected int y=1;</span><br><span class="line">	public int z=2;</span><br><span class="line">	</span><br><span class="line">	demo1(int x,int y,int z)&#123;</span><br><span class="line">		this.y=y;</span><br><span class="line">		this.z=z;</span><br><span class="line">		this.x=x;</span><br><span class="line">	&#125;</span><br><span class="line">	demo1()&#123;</span><br><span class="line">		System.out.println(&quot;123&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -984,92 +1110,6 @@
 
 
   
-    <article id="post-BindarySearch" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/10/BindarySearch/">BindarySearch</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/10/BindarySearch/" class="archive-article-date">
-  	<time datetime="2019-09-10T01:15:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>思路：<font color=#FF1493 size=3><br>        创建一个队列，通过高 低下标来确定中间元素的下标，然后访问中间元素的值与要查找的值进行比较，<br>        再通过具体情况来移动高低下标。<br></font></p>
-<p>代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">public class BindaryFind &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 二分法查找</span><br><span class="line">		//前提:数组有序</span><br><span class="line">		Scanner input=new Scanner(System.in);</span><br><span class="line">		</span><br><span class="line">		int[]nums=new int[] &#123;5,6,7,8,9,10,11,12,17,30,211&#125;;</span><br><span class="line">		int high=nums.length-1;</span><br><span class="line">		int low=0;</span><br><span class="line">		</span><br><span class="line">		int searchnum;</span><br><span class="line">		</span><br><span class="line">		for(int i=0;i&lt;nums.length;i++) &#123;</span><br><span class="line">			System.out.print(nums[i]+&quot;\t&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		System.out.println();</span><br><span class="line">		System.out.print(&quot;请输入要查找的数字：&quot;);</span><br><span class="line">		searchnum=input.nextInt();</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		while((low&lt;=high))&#123;</span><br><span class="line">			</span><br><span class="line">			int mid=(high+low)/2;</span><br><span class="line">			</span><br><span class="line">			if(searchnum&lt;nums[low]||searchnum&gt;nums[high]) &#123;</span><br><span class="line">				System.out.println(&quot;没有你要找的元素&quot;);</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			if(searchnum&gt;nums[mid])&#123;</span><br><span class="line">				low=mid+1;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			if(searchnum==nums[mid]) &#123;</span><br><span class="line">				System.out.print(&quot;找到你要找到的数字,数组的第&quot;+(mid+1)+&quot;个元素&quot;);</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">			if(searchnum&lt;nums[mid]) &#123;</span><br><span class="line">				high=mid-1;</span><br><span class="line">			&#125;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">二分法查找</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/查找（java）//" class="article-tag-list-link color4">查找（java）</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/10/BindarySearch/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1179,7 +1219,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">I/O流</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">super 访问修饰符</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1187,27 +1227,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">选择排序 冒泡排序 反转排序 java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">super 访问修饰符</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">图</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">树</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">I/O流</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">算法 栈</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">接口 抽象类</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">选择排序 冒泡排序 反转排序 java</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1215,11 +1243,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">树</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">算法 链表</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">接口 抽象类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">算法 栈</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承 java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1227,7 +1271,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">继承 java</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">算法 链表</a>
               </li>
             
             <div class="clearfix"></div>

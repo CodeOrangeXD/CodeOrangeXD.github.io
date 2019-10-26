@@ -6,17 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>sort | Blog of Orange</title>
+  <title>Tag: c | Blog of Orange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="冒泡排序思路：        前一个元素和后一个元素比较，让后交换，每轮选取一个最值。 代码如下 123456789101112131415161718192021222324public class MaoPao &amp;#123;	public static void main(String[] args) &amp;#123;		&#x2F;&#x2F; 冒牌排序		int temp;		int nums[]= &amp;#123;">
-<meta name="keywords" content="选择排序 冒泡排序 反转排序 java">
-<meta property="og:type" content="article">
-<meta property="og:title" content="sort">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;09&#x2F;09&#x2F;sort&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Blog of Orange">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;c&#x2F;index.html">
 <meta property="og:site_name" content="Blog of Orange">
-<meta property="og:description" content="冒泡排序思路：        前一个元素和后一个元素比较，让后交换，每轮选取一个最值。 代码如下 123456789101112131415161718192021222324public class MaoPao &amp;#123;	public static void main(String[] args) &amp;#123;		&#x2F;&#x2F; 冒牌排序		int temp;		int nums[]= &amp;#123;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-09T03:12:49.664Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Blog of Orange" type="application/atom+xml">
@@ -155,174 +151,71 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-sort" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      sort
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/26/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2019-10-26T05:51:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-26</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/26/%E7%BA%BF%E6%80%A7%E8%A1%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">线性表的基本操作</a>
     </h1>
   
 
-        
-        <a href="/2019/09/09/sort/" class="archive-article-date">
-  	<time datetime="2019-09-09T02:55:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a><em>冒泡排序</em></h1><p>思路：<font color=#FFD700 size=3><br>        前一个元素和后一个元素比较，让后交换，每轮选取一个最值。<br></font><br> 代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class MaoPao &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 冒牌排序</span><br><span class="line">		int temp;</span><br><span class="line">		int nums[]= &#123;7,1,2,5,4&#125;;</span><br><span class="line">		for(int i=0;i&lt;nums.length-1;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			for(int j=0;j&lt;nums.length-1;j++) &#123;</span><br><span class="line">				if(nums[j]&gt;nums[j+1]) &#123;</span><br><span class="line">					temp=nums[j];</span><br><span class="line">					nums[j]=nums[j+1];</span><br><span class="line">					nums[j+1]=temp;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		for(int i=0;i&lt;nums.length;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.print(nums[i]+&quot;\t&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a><em>选择排序</em></h1><p>思路：<font color=#9932CC size=3><br>        先创建一个控下标minindex，初值为数组的一个元素的index,然后第i个元素与后面的元素比较，<br>        如果关系成立，则将最小的下标赋给minindex，最后交换。<br></font><br> 代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class Select &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 选择排序</span><br><span class="line">		int nums[]= &#123;3,1,2,5,4&#125;;</span><br><span class="line">		int temp;</span><br><span class="line">		for(int i=0;i&lt;nums.length-1;i++)&#123;</span><br><span class="line">			int minindex=i;</span><br><span class="line">			for(int j=i+1;j&lt;nums.length;j++)&#123;</span><br><span class="line">				if(nums[minindex]&gt;nums[j])&#123;</span><br><span class="line">					minindex=j;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			temp=nums[minindex];</span><br><span class="line">			nums[minindex]=nums[i];</span><br><span class="line">			nums[i]=temp;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		for(int i=0;i&lt;nums.length;i++) &#123;</span><br><span class="line">			System.out.print(nums[i]+&quot;\t&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="反转排序"><a href="#反转排序" class="headerlink" title="反转排序"></a><em>反转排序</em></h1><p>思路：<font color=#FF1493 size=3><br>        第一个与最后一个元素交换，第二个和倒数第二个交换。。。。以此类推。<br></font><br> 代码如下</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> public class Fanzhuan &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line">		// 反转排序</span><br><span class="line">		int temp;</span><br><span class="line">		int nums[]= &#123;3,4,5,6,7&#125;;</span><br><span class="line">		for(int i=0;i&lt;nums.length/2;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			temp=nums[i];</span><br><span class="line">			nums[i]=nums[nums.length-i-1];</span><br><span class="line">			nums[nums.length-i-1]=temp;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		for(int i=0;i&lt;nums.length;i++)</span><br><span class="line">		&#123;</span><br><span class="line">			System.out.print(nums[i]+&quot;\t&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">选择排序 冒泡排序 反转排序 java</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">c</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/排序（java）//" class="article-tag-list-link color4">排序（java）</a>
+        			<a href="/categories/算法//" class="article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/09/sort/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/09/10/BindarySearch/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          BindarySearch
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/09/07/%E6%B4%97%E7%89%8C%EF%BC%88java%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">洗牌(java)</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -345,9 +238,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
